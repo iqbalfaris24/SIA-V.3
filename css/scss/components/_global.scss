@@ -37,6 +37,10 @@ body {
    color: var(--color-txt);
    font-family: Arial, sans-serif;
 
+   .d-none {
+      display: none;
+   }
+
    h1,
    h2,
    h3,

@@ -3,11 +3,10 @@
    /* style untuk layar besar di sini */
 }
 
-/* Layar sedang (lebar minimum 768px) */
+/* Layar sedang (lebar maximum 1199px) */
 @media screen and (max-width: 1199px) {
 
    /* style untuk layar sedang di sini */
-
    nav {
       .menu {
          h4 {
@@ -27,8 +26,6 @@
             width: 150px;
          }
       }
-
-
    }
 
    .sidebar {
@@ -54,7 +51,6 @@
          }
       }
    }
-
 }
 
 /* Layar kecil (lebar maksimum 767px) */
@@ -84,7 +80,27 @@
          }
       }
 
-      // .sidebar__main {}
+      .sidebar__main {
+         padding: 5px;
+         text-align: center;
+         margin: 20px 0;
+
+         .main-header {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p {
+               margin-bottom: 15px;
+            }
+
+         }
+
+         .jumbotron {
+            .card {
+               padding: 10px;
+            }
+         }
+      }
 
    }
 }
