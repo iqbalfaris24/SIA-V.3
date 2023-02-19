@@ -1,0 +1,90 @@
+/* Layar besar (lebar minimum 1200px) */
+@media screen and (min-width: 1200px) {
+   /* style untuk layar besar di sini */
+}
+
+/* Layar sedang (lebar minimum 768px) */
+@media screen and (max-width: 1199px) {
+
+   /* style untuk layar sedang di sini */
+
+   nav {
+      .menu {
+         h4 {
+            display: none;
+         }
+      }
+
+      .dropdown {
+         .user {
+            span {
+               display: none;
+            }
+         }
+
+         .dropdown-content {
+            right: 0;
+            width: 150px;
+         }
+      }
+
+
+   }
+
+   .sidebar {
+      .sidebar__sidebar {
+         transform: translateX(0);
+      }
+
+      .sidebar__main {
+         margin-left: 220px;
+      }
+
+      &.sidebar--show {
+         .sidebar__sidebar {
+            transform: translateX(-100%);
+
+            &:hover {
+               overflow-y: auto;
+            }
+         }
+
+         .sidebar__main {
+            margin-left: 0;
+         }
+      }
+   }
+
+}
+
+/* Layar kecil (lebar maksimum 767px) */
+@media screen and (max-width: 767px) {
+
+   /* style untuk layar kecil di sini */
+   .sidebar {
+      .sidebar__sidebar {
+         width: 100vw;
+
+         .sidebar-content {
+            .sidebar-nav-top {
+               width: 100vw;
+            }
+
+            .sidebar-nav-bottom {
+               width: 100vw;
+
+               .sidebar-item {
+                  a {
+                     &.active {
+                        margin-left: 0;
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      // .sidebar__main {}
+
+   }
+}

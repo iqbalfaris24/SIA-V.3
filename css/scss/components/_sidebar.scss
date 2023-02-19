@@ -1,0 +1,268 @@
+.sidebar {
+   display: flex;
+   margin-top: 55px;
+
+   &.sidebar--show {
+      .sidebar__sidebar {
+         transform: translateX(0);
+      }
+
+      .sidebar__main {
+         margin-left: 220px;
+      }
+   }
+
+   .sidebar__sidebar {
+      background-color: var(--color-bg-side);
+      display: flex;
+      position: fixed;
+      width: 220px;
+      height: 100vh;
+      padding-top: 15px;
+      padding-right: 8px;
+      margin-right: -8px;
+      /* Negatif dari lebar scrollbar */
+      text-align: center;
+      transition: all 0.3s ease-out;
+      transform: translateX(-100%);
+      overflow: hidden;
+
+      &:hover {
+         overflow: auto;
+         overflow-x: hidden;
+      }
+
+      .sidebar-content {
+         .sidebar-nav-top {
+            padding-top: 15px;
+            width: 220px;
+
+            .semester {
+               color: var(--color-txt-muted);
+               height: 35px;
+            }
+
+            .dark-light-button {
+               .theme-toggle {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  width: 50px;
+                  height: 30px;
+                  margin: 10px;
+
+                  .theme-toggle__input {
+                     display: none;
+                  }
+
+                  .theme-toggle__slider {
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     right: 0;
+                     bottom: 0;
+                     background-color: #2196F3;
+                     border-radius: 30px;
+                     transition: background-color 0.4s ease;
+
+                     &:before {
+                        position: absolute;
+                        content: "";
+                        height: 22px;
+                        width: 22px;
+                        left: 4px;
+                        bottom: 4px;
+                        background-color: white;
+                        border-radius: 50%;
+                        transition: transform 0.4s ease;
+                        transform: translateX(20px);
+                     }
+                  }
+
+                  .theme-toggle__input:checked+.theme-toggle__slider {
+                     background-color: #ccc;
+
+                     &:before {
+                        transform: translateX(0);
+                     }
+                  }
+               }
+            }
+         }
+
+         .sidebar-nav-bottom {
+            text-align: left;
+            width: 220px;
+            padding-bottom: 200px;
+
+            .sidebar-item {
+               a {
+                  display: inline-flex;
+                  align-items: center;
+                  width: 100%;
+                  margin: 8px 0;
+                  height: 30px;
+                  font-size: 12px;
+                  padding: 0 20px;
+
+                  span {
+                     margin-left: 10px;
+                  }
+
+                  &:hover {
+                     background-color: var(--color-bg);
+                  }
+
+                  &.active {
+                     background-color: var(--color-bg);
+                     margin-left: 10px;
+                     font-weight: bold;
+                     border-left: 5px solid var(--color-border);
+                     border-radius: 5px;
+                  }
+               }
+
+               &.accordion-item {
+
+                  .accordion-header {
+                     cursor: pointer;
+                     display: flex;
+                     align-items: center;
+                     flex-wrap: wrap;
+                     width: 100%;
+                     margin: 8px 0;
+                     height: 30px;
+                     font-size: 12px;
+                     padding: 0 20px;
+                     color: var(--color-headline);
+
+                     &:hover {
+                        background-color: var(--color-bg);
+                     }
+
+                     span {
+                        margin-left: 10px;
+                     }
+
+                     .fa-chevron-right,
+                     .fa-chevron-down {
+                        margin-left: auto;
+                     }
+                  }
+
+                  .accordion-content {
+                     overflow: hidden;
+                     max-height: 0;
+                     transition: max-height 0.6s ease;
+
+                     li {
+                        display: flex;
+                        margin-left: 25px;
+                        text-align: left;
+
+                        a {
+                           margin: 0;
+                           justify-content: start;
+
+                           i {
+                              margin-right: 10px;
+                           }
+
+                           &:hover {
+                              background-color: var(--color-bg-side);
+                              color: var(--color-btn);
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+
+         }
+      }
+   }
+
+   .sidebar__main {
+      width: 100%;
+      padding: 35px 50px;
+      transition: all 0.3s ease-out;
+      overflow: hidden;
+      overflow-x: hidden;
+
+      &:hover {
+         overflow: auto;
+         overflow-x: hidden;
+      }
+
+      .main-header {
+         width: 100%;
+         display: flex;
+         margin: 10px 0px;
+         align-items: center;
+         justify-content: space-between;
+
+         p {
+            span {
+               background-color: var(--color-btn);
+               color: var(--color-btn-txt);
+               padding: 5px;
+               border-radius: 15px;
+            }
+         }
+
+         .breadcrumb {
+            ol {
+               display: flex;
+
+               li {
+                  margin: 0 5px;
+               }
+            }
+         }
+      }
+
+      .jumbotron {
+         .card {
+            width: 100%;
+            padding: 40px;
+            margin: 20px 0;
+            background-color: var(--color-bg-side);
+            border-radius: 10px;
+
+            .card-header {
+               margin-bottom: 20px;
+            }
+
+            .card-body {
+               overflow-x: auto;
+
+               table {
+                  width: 100%;
+                  text-align: left;
+                  min-width: 900px;
+
+                  thead {
+                     tr {
+                        th {
+                           border-bottom: 1px solid black;
+                           border-collapse: collapse;
+                           font-weight: bold;
+                           padding: 10px 0;
+                        }
+                     }
+                  }
+
+                  tbody {
+                     tr {
+                        td {
+                           padding: 10px 0;
+                           color: var(--color-headline);
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

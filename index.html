@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/scss/style.css" />
+  <link rel="stylesheet" href="utilities/Icons/fontawesome-free-6.3.0-web/css/all.css" />
+  <link rel="stylesheet" href="utilities/Icons/bootstrap-icons-1.9.0/bootstrap-icons.css" />
+  <script src="utilities/Icons/feather.min.js"></script>
+  <title>Admin</title>
+</head>
+
+<body>
+  <!-- Navigasi -->
+  <nav>
+    <div class="menu">
+      <button class="btn-menu">
+        <i data-feather="menu"></i>
+      </button>
+      <h4>Universitas Bhayangkara Jakarta Raya</h4>
+    </div>
+
+    <div class="brand">
+      <a href="">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h1>SIA</h1>
+      </a>
+    </div>
+
+    <div class="dropdown">
+      <button class="user">
+        <img class="user__img" src="img/person.png" alt="" />
+        <span class="user__name">IQBAL FARIS AKBAR</span>
+        <i data-feather="chevron-down" class="chevron-up"></i>
+        <i data-feather="chevron-up" class="chevron-down d-none"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">
+          <i data-feather="settings"></i>
+          <span>Profile</span>
+        </a>
+        <a href="#">
+          <i data-feather="log-out"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- End Of Navigasi -->
+
+  <!-- Sidebar Section -->
+  <div class="sidebar sidebar--show">
+    <!-- Sidebar -->
+    <aside class="sidebar__sidebar">
+      <div class="sidebar-content">
+        <div class="sidebar-nav-top">
+          <div class="semester">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>2022/2023 Genap</span>
+          </div>
+          <div class="dark-light-button">
+            <label for="theme-toggle" class="theme-toggle">
+              <input type="checkbox" id="theme-toggle" class="theme-toggle__input">
+              <span class="theme-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="sidebar-nav-bottom">
+          <div class="sidebar-item">
+            <a href="" class="active">
+              <i class="fa-solid fa-house"></i>
+              <span>Dashboard</span>
+            </a>
+          </div>
+
+          <div class="sidebar-item">
+            <a href="" class="">
+              <i class="fa-solid fa-book-bookmark"></i>
+              <span>KRS</span>
+            </a>
+          </div>
+
+          <div class="sidebar-item accordion-item">
+            <div class="accordion-header" data-id="1">
+              <i class="fa-solid fa-folder-open"></i>
+              <span>Perkuliahan</span>
+              <i id="chevron1" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="accordion-content">
+              <li><a href=""><i class="bi bi-arrow-right"></i>Jadwal Kuliah</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>jadwal UTS</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Jadwal UAS</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Daftar Nilai</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>KRS</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>KHS</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Presensi</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Transkip</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Kelas Online</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Kerja Praktek</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Tugas Akhir</a></li>
+              <li><a href=""><i class="bi bi-arrow-right"></i>Kampus Merdeka</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-item accordion-item">
+            <div class="accordion-header" data-id="2">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <span>Administrasi</span>
+              <i id="chevron2" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="accordion-content">
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Cara Pembayaran</a></li>
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Tagihan</a></li>
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Pengajuan Pembayaran</a></li>
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Cuti Akademik</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-item accordion-item">
+            <div class="accordion-header" data-id="3">
+              <i class="fa-solid fa-cubes"></i>
+              <span>Penilaian Kinerja</span>
+              <i id="chevron3" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <ul class="accordion-content">
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Penilaian Kinerja Unit</a></li>
+              <li><a href=""><i class="bi bi-arrow-return-right"></i>Penilaian Kinerja Dosen</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="sidebar__main">
+      <h2>Dashboard</h2>
+      <div class="main-header">
+        <p>
+          Selamat Datang <span>Iqbal Faris Akbar</span>
+        </p>
+        <div aria-label="breadcrumb" class="breadcrumb">
+          <ol>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>/
+            <li class="breadcrumb-item active">Library</li>
+          </ol>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <div class="card">
+          <div class="card-header">
+            <h4>Jadwal Hari Ini, Senin</h4>
+          </div>
+          <div class="card-body">
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Waktu</th>
+                  <th>Mata Kuliah</th>
+                  <th>Dosen</th>
+                  <th>Ruangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:45:00 13:15:00</td>
+                  <td>INFO-3640 Database Lanjut</td>
+                  <td>Dr.Rakhmi khalida, ST, MMSI</td>
+                  <td>R.K911</td>
+                </tr>
+                <tr>
+                  <td>10:45:00 13:15:00</td>
+                  <td>INFO-3635 - Desain dan Implementasi</td>
+                  <td>Hendarman Lubis, S.Kom., M.Kom</td>
+                  <td>SS-409</td>
+                </tr>
+                <tr>
+                  <td>10:45:00 13:15:00</td>
+                  <td>INFO-3641 - Pemrograman Berbasis Framework</td>
+                  <td>Achmad Noe'man, S.Kom., M.Kom.</td>
+                  <td>R.K915</td>
+                </tr>
+                <tr>
+                  <td>13:30:00 16:00:00</td>
+                  <td>INFO-3633 - Riset Teknologi Informasi</td>
+                  <td>Ratna Salkiawati, S.T., M.Kom</td>
+                  <td>SS-308</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- End Of Sidebar Section -->
+  <script>
+    var table = document.getElementById("myTable");
+    var rows = table.getElementsByTagName("tr");
+    for (var i = 1; i < rows.length; i++) {
+      rows[i].insertCell(0);
+      rows[i].cells[0].innerHTML = i;
+    }
+  </script>
+
+  <script>
+    feather.replace();
+    const btnMenu = document.querySelector(".btn-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    btnMenu.addEventListener("click", function () {
+      sidebar.classList.toggle("sidebar--show");
+    });
+  </script>
+
+  <script>
+    const button = document.querySelector(".dropdown");
+    const chevronUp = document.querySelector(".chevron-up");
+    const chevronDown = document.querySelector(".chevron-down");
+
+    button.addEventListener("mouseenter", () => {
+      chevronUp.classList.add("d-none");
+      chevronDown.classList.remove("d-none");
+    });
+
+    button.addEventListener("mouseleave", () => {
+      chevronUp.classList.remove("d-none");
+      chevronDown.classList.add("d-none");
+    });
+  </script>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('change', function () {
+      if (this.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.body.classList.add('light-mode');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.body.classList.remove('light-mode');
+      }
+    });
+
+
+
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        // Toggle class active pada header
+        header.classList.toggle('active');
+
+        // Ambil accordion-content dari sibling element header
+        const accordionContent = header.nextElementSibling;
+        const chevronIcon = document.getElementById(`chevron${header.getAttribute('data-id')}`);
+        // Cek apakah accordion-content sedang terbuka
+        if (accordionContent.style.maxHeight) {
+          // Jika iya, maka accordion-content ditutup
+          accordionContent.style.maxHeight = null;
+          chevronIcon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+        } else {
+          // Jika tidak, maka accordion-content dibuka dan accordion lainnya ditutup
+          const accordions = document.querySelectorAll('.accordion-content');
+          accordions.forEach(acc => {
+            acc.style.maxHeight = null;
+            acc.previousElementSibling.classList.remove('active');
+            const otherChevronIcon = document.getElementById(`chevron${acc.previousElementSibling.getAttribute('data-id')}`);
+
+            otherChevronIcon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+          });
+
+          // Set maxHeight pada accordion-content agar bisa dibuka
+          accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
+          chevronIcon.classList.replace('fa-chevron-right', 'fa-chevron-down');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
