@@ -34,7 +34,7 @@
       }
 
       .sidebar__main {
-         margin-left: 220px;
+         margin-left: 300px;
       }
 
       &.sidebar--show {
@@ -86,14 +86,19 @@
          margin: 20px 0;
 
          .main-header {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            display: block;
 
             p {
                margin-bottom: 15px;
             }
 
+            .breadcrumb {
+               margin-bottom: 15px;
+
+               ol {
+                  justify-content: center;
+               }
+            }
          }
 
          .jumbotron {

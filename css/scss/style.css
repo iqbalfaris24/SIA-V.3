@@ -184,6 +184,13 @@ nav .dropdown .user .user__name {
   margin: 0 10px;
 }
 
+.breadcrumb ol {
+  display: flex;
+}
+.breadcrumb ol li {
+  margin: 0 5px;
+}
+
 .sidebar {
   display: flex;
   margin-top: 55px;
@@ -192,13 +199,13 @@ nav .dropdown .user .user__name {
   transform: translateX(0);
 }
 .sidebar.sidebar--show .sidebar__main {
-  margin-left: 220px;
+  margin-left: 300px;
 }
 .sidebar .sidebar__sidebar {
   background-color: var(--color-bg-side);
   display: flex;
   position: fixed;
-  width: 220px;
+  width: 300px;
   height: 100vh;
   padding-top: 15px;
   padding-right: 8px;
@@ -215,7 +222,7 @@ nav .dropdown .user .user__name {
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-top {
   padding-top: 15px;
-  width: 220px;
+  width: 300px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-top .semester {
   color: var(--color-txt-muted);
@@ -262,7 +269,7 @@ nav .dropdown .user .user__name {
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom {
   text-align: left;
-  width: 220px;
+  width: 300px;
   padding-bottom: 200px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item a {
@@ -354,12 +361,6 @@ nav .dropdown .user .user__name {
   padding: 5px;
   border-radius: 15px;
 }
-.sidebar .sidebar__main .main-header .breadcrumb ol {
-  display: flex;
-}
-.sidebar .sidebar__main .main-header .breadcrumb ol li {
-  margin: 0 5px;
-}
 .sidebar .sidebar__main .jumbotron .card {
   width: 100%;
   padding: 40px;
@@ -389,6 +390,10 @@ nav .dropdown .user .user__name {
   color: var(--color-headline);
 }
 
+.sidebar__main .jumbotron .main-jumbotron {
+  border: 1px solid var(--color-border);
+}
+
 /* Layar besar (lebar minimum 1200px) */
 @media screen and (min-width: 1200px) {
   /* style untuk layar besar di sini */
@@ -410,7 +415,7 @@ nav .dropdown .user .user__name {
     transform: translateX(0);
   }
   .sidebar .sidebar__main {
-    margin-left: 220px;
+    margin-left: 300px;
   }
   .sidebar.sidebar--show .sidebar__sidebar {
     transform: translateX(-100%);
@@ -443,12 +448,16 @@ nav .dropdown .user .user__name {
     margin: 20px 0;
   }
   .sidebar .sidebar__main .main-header {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: block;
   }
   .sidebar .sidebar__main .main-header p {
     margin-bottom: 15px;
+  }
+  .sidebar .sidebar__main .main-header .breadcrumb {
+    margin-bottom: 15px;
+  }
+  .sidebar .sidebar__main .main-header .breadcrumb ol {
+    justify-content: center;
   }
   .sidebar .sidebar__main .jumbotron .card {
     padding: 10px;
