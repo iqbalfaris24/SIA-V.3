@@ -26,6 +26,7 @@
       transition: all 0.3s ease-out;
       transform: translateX(-100%);
       overflow: hidden;
+      z-index: 99;
 
       &:hover {
          overflow: auto;
@@ -198,8 +199,10 @@
          width: 100%;
          display: flex;
          margin: 10px 0px;
+         padding-bottom: 15px;
          align-items: center;
          justify-content: space-between;
+         border-bottom: 2px solid var(--color-border);
 
          p {
             span {

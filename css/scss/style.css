@@ -1,5 +1,6 @@
 :root {
   --color-bg: #111315;
+  --color-bg-muted: #bdbdbd;
   --color-bg-side: #191D1F;
   --color-headline: #fffffe;
   --color-txt: #b8c1ec;
@@ -8,6 +9,7 @@
   --color-btn-txt: #F5FCFC;
   --color-border: #12162900;
   --color-bg-light: #F4F4F4;
+  --color-bg-muted-light: #ddd;
   --color-bg-side-light: #FCFCFC;
   --color-headline-light: #094067;
   --color-btn-txt-light: #5f6c7b;
@@ -47,6 +49,10 @@
   font-family: "Helvetica";
   src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff) format("woof");
   src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff2) format("woof2");
+}
+@font-face {
+  font-family: "fontawesome";
+  src: url(../../../utilities/Icons/fontawesome-free-6.3.0-web/css/all.css);
 }
 body {
   background-color: var(--color-bg);
@@ -88,6 +94,7 @@ body button:hover {
 }
 body.light-mode {
   --color-bg: var(--color-bg-light);
+  --color-bg-muted: var(--color-bg-muted-light);
   --color-bg-side: var(--color-bg-side-light);
   --color-headline: var(--color-headline-light);
   --color-txt: var(--color-txt-light);
@@ -215,6 +222,7 @@ nav .dropdown .user .user__name {
   transition: all 0.3s ease-out;
   transform: translateX(-100%);
   overflow: hidden;
+  z-index: 99;
 }
 .sidebar .sidebar__sidebar:hover {
   overflow: auto;
@@ -352,8 +360,10 @@ nav .dropdown .user .user__name {
   width: 100%;
   display: flex;
   margin: 10px 0px;
+  padding-bottom: 15px;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid var(--color-border);
 }
 .sidebar .sidebar__main .main-header p span {
   background-color: var(--color-btn);
@@ -390,8 +400,115 @@ nav .dropdown .user .user__name {
   color: var(--color-headline);
 }
 
-.sidebar__main .jumbotron .main-jumbotron {
-  border: 1px solid var(--color-border);
+.sidebar__main.krs .jumbotron {
+  background-color: var(--color-bg-side);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 40px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header {
+  display: flex;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper::after {
+  content: "\f077";
+  /* kode ikon chevron-up */
+  font-family: "fontawesome";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%) rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 200px;
+  height: 40px;
+  background-color: var(--color-bg);
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: var(--color-headline);
+  border-radius: 5px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select:focus {
+  outline: none;
+  border-color: #2985FF;
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select:hover {
+  cursor: pointer;
+  background-color: var(--color-bg);
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select option {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--color-headline);
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select option:checked {
+  background-color: var(--color-btn);
+  color: var(--color-text);
+}
+.sidebar__main.krs .jumbotron .jumbotron-header .btn {
+  margin-left: 20px;
+  width: 100px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--color-bg-side);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item h3 {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #555;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus,
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
+  outline: none;
+  border-color: #2b94b8;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[disabled] {
+  background-color: var(--color-bg-muted);
+  cursor: not-allowed;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::-moz-placeholder {
+  color: var(--color-text-muted);
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
+  color: var(--color-text-muted);
 }
 
 /* Layar besar (lebar minimum 1200px) */
@@ -416,6 +533,16 @@ nav .dropdown .user .user__name {
   }
   .sidebar .sidebar__main {
     margin-left: 300px;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-header {
+    display: block !important;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-header .btn {
+    margin-top: 20px;
+    height: 40px;
+    width: 50%;
   }
   .sidebar.sidebar--show .sidebar__sidebar {
     transform: translateX(-100%);
@@ -461,5 +588,46 @@ nav .dropdown .user .user__name {
   }
   .sidebar .sidebar__main .jumbotron .card {
     padding: 10px;
+  }
+  .sidebar .sidebar__main.krs .jumbotron {
+    padding: 10px;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card {
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item h3 {
+    text-align: start;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #555;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus,
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
+    outline: none;
+    border-color: #2b94b8;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[disabled] {
+    background-color: var(--color-bg-muted);
+    cursor: not-allowed;
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::-moz-placeholder {
+    color: var(--color-text-muted);
+  }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
+    color: var(--color-text-muted);
   }
 }/*# sourceMappingURL=style.css.map */

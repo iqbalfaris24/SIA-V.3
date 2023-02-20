@@ -1,7 +1,126 @@
-.sidebar__main {
+.sidebar__main.krs {
    .jumbotron {
-      .main-jumbotron {
-         border: 1px solid var(--color-border);
+      background-color: var(--color-bg-side);
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 40px;
+
+      .jumbotron-header {
+         display: flex;
+
+         .select-wrapper {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+
+            &::after {
+               content: "\f077";
+               /* kode ikon chevron-up */
+               font-family: "fontawesome";
+               position: absolute;
+               top: 50%;
+               right: 0.5rem;
+               transform: translateY(-50%) rotate(180deg);
+               transition: transform 0.3s ease-in-out;
+            }
+
+            .select {
+               appearance: none;
+               width: 200px;
+               height: 40px;
+               background-color: var(--color-bg);
+               border: 1px solid #ccc;
+               padding: 10px;
+               font-size: 16px;
+               font-weight: bold;
+               transition: all 0.3s ease-in-out;
+               color: var(--color-headline);
+               border-radius: 5px;
+
+               &:focus {
+                  outline: none;
+                  border-color: #2985FF;
+               }
+
+               &:hover {
+                  cursor: pointer;
+                  background-color: var(--color-bg);
+               }
+
+               & option {
+                  font-weight: normal;
+                  font-size: 14px;
+                  color: var(--color-headline);
+               }
+
+               & option:checked {
+                  background-color: var(--color-btn);
+                  color: var(--color-text);
+               }
+            }
+         }
+
+         .btn {
+            margin-left: 20px;
+            width: 100px;
+         }
+      }
+
+      .jumbotron-main {
+         .card {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: var(--color-bg-side);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+               box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .card-item {
+               flex-basis: calc(50% - 20px);
+               margin-bottom: 20px;
+            }
+
+            .card-item h3 {
+               margin: 0 0 10px;
+               font-weight: bold;
+               font-size: 16px;
+            }
+
+            .card-item input[type="text"] {
+               display: block;
+               width: 100%;
+               padding: 10px;
+               border-radius: 5px;
+               border: 1px solid #ccc;
+               font-size: 16px;
+               color: #555;
+               background-color: #f2f2f2;
+               box-sizing: border-box;
+               transition: border-color 0.3s ease-in-out;
+            }
+
+            .card-item input[type="text"]:focus,
+            .card-item input[type="text"]:active {
+               outline: none;
+               border-color: #2b94b8;
+            }
+
+            .card-item input[disabled] {
+               background-color: var(--color-bg-muted);
+               cursor: not-allowed;
+            }
+
+            .card-item input::placeholder {
+               color: var(--color-text-muted);
+            }
+         }
       }
    }
 }

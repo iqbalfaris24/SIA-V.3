@@ -32,6 +32,11 @@
    src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff2) format('woof2');
 }
 
+@font-face {
+   font-family: 'fontawesome';
+   src: url(../../../utilities/Icons/fontawesome-free-6.3.0-web/css/all.css);
+}
+
 body {
    background-color: var(--color-bg);
    color: var(--color-txt);
@@ -78,6 +83,7 @@ body {
 
    &.light-mode {
       --color-bg: var(--color-bg-light);
+      --color-bg-muted: var(--color-bg-muted-light);
       --color-bg-side: var(--color-bg-side-light);
       --color-headline: var(--color-headline-light);
       --color-txt: var(--color-txt-light);
