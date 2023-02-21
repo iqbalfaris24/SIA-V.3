@@ -38,8 +38,8 @@
 }
 
 body {
-   background-color: var(--color-bg);
-   color: var(--color-txt);
+   background-color: var(--bg-color);
+   color: var(--txt-color);
    font-family: Arial, sans-serif;
 
    .d-none {
@@ -53,7 +53,7 @@ body {
    h5,
    h6,
    a {
-      color: var(--color-headline);
+      color: var(--headline-color);
    }
 
    p {
@@ -69,7 +69,7 @@ body {
    button {
       border-radius: 5px;
       min-width: 35px;
-      background-color: var(--color-btn);
+      background-color: var(--btn-color);
       transition: filter 0.2s ease-out;
       border: none;
       overflow: hidden;
@@ -82,21 +82,21 @@ body {
    }
 
    &.light-mode {
-      --color-bg: var(--color-bg-light);
-      --color-bg-muted: var(--color-bg-muted-light);
-      --color-bg-side: var(--color-bg-side-light);
-      --color-headline: var(--color-headline-light);
-      --color-txt: var(--color-txt-light);
-      --color-txt-muted: var(--color-btn-txt-muted-light);
-      --color-btn: var(--color-btn-light);
-      --color-btn-txt: var(--color-btn-txt-light);
-      --color-border: var(--color-border-light);
+      --bg-color: var(--color-bg-light);
+      --bg-muted-color: var(--color-bg-muted-light);
+      --bg-side-color: var(--color-bg-side-light);
+      --headline-color: var(--color-headline-light);
+      --txt-color: var(--color-txt-light);
+      --txt-muted-color: var(--color-btn-txt-muted-light);
+      --btn-color: var(--color-btn-light);
+      --btn-txt-color: var(--color-btn-txt-light);
+      --border-color: var(--color-border-light);
    }
 
 }
 
 nav {
-   background-color: var(--color-bg-side);
+   background-color: var(--bg-side-color);
    position: fixed;
    display: flex;
    top: 0;
@@ -156,10 +156,10 @@ nav {
          top: 55px;
          display: none;
          position: absolute;
-         background-color: var(--color-bg-side);
+         background-color: var(--bg-side-color);
          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
          z-index: 999;
-         border: 0px 1px 1px 1px solid var(--color-border);
+         border: 0px 1px 1px 1px solid var(--border-color);
 
          a {
             padding: 5px 20px;
@@ -168,7 +168,7 @@ nav {
             align-items: center;
 
             &:hover {
-               background-color: var(--color-bg);
+               background-color: var(--bg-color);
                filter: brightness(0.8);
             }
 
@@ -183,7 +183,7 @@ nav {
          align-items: center;
          justify-content: center;
          background-color: transparent;
-         color: var(--color-headline);
+         color: var(--headline-color);
 
          .user__img {
             width: 25px;

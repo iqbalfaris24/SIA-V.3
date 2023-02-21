@@ -13,7 +13,7 @@
    }
 
    .sidebar__sidebar {
-      background-color: var(--color-bg-side);
+      background-color: var(--bg-side-color);
       display: flex;
       position: fixed;
       width: 300px;
@@ -39,7 +39,7 @@
             width: 300px;
 
             .semester {
-               color: var(--color-txt-muted);
+               color: var(--txt-muted-color);
                height: 35px;
             }
 
@@ -111,14 +111,14 @@
                   }
 
                   &:hover {
-                     background-color: var(--color-bg);
+                     background-color: var(--bg-color);
                   }
 
                   &.active {
-                     background-color: var(--color-bg);
+                     background-color: var(--bg-color);
                      margin-left: 10px;
                      font-weight: bold;
-                     border-left: 5px solid var(--color-border);
+                     border-left: 5px solid var(--border-color);
                      border-radius: 5px;
                   }
                }
@@ -135,10 +135,10 @@
                      height: 30px;
                      font-size: 12px;
                      padding: 0 20px;
-                     color: var(--color-headline);
+                     color: var(--headline-color);
 
                      &:hover {
-                        background-color: var(--color-bg);
+                        background-color: var(--bg-color);
                      }
 
                      span {
@@ -170,8 +170,8 @@
                            }
 
                            &:hover {
-                              background-color: var(--color-bg-side);
-                              color: var(--color-btn);
+                              background-color: var(--bg-side-color);
+                              color: var(--btn-color);
                            }
                         }
                      }
@@ -202,12 +202,12 @@
          padding-bottom: 15px;
          align-items: center;
          justify-content: space-between;
-         border-bottom: 2px solid var(--color-border);
+         border-bottom: 2px solid var(--border-color);
 
          p {
             span {
-               background-color: var(--color-btn);
-               color: var(--color-btn-txt);
+               background-color: var(--btn-color);
+               color: var(--btn-txt-color);
                padding: 5px;
                border-radius: 15px;
             }
@@ -221,7 +221,7 @@
             width: 100%;
             padding: 40px;
             margin: 20px 0;
-            background-color: var(--color-bg-side);
+            background-color: var(--bg-side-color);
             border-radius: 10px;
 
             .card-header {
@@ -251,7 +251,7 @@
                      tr {
                         td {
                            padding: 10px 0;
-                           color: var(--color-headline);
+                           color: var(--headline-color);
                         }
                      }
                   }

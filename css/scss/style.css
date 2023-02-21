@@ -1,13 +1,13 @@
 :root {
-  --color-bg: #111315;
-  --color-bg-muted: #bdbdbd;
-  --color-bg-side: #191D1F;
-  --color-headline: #fffffe;
-  --color-txt: #b8c1ec;
-  --color-txt-muted: #b8c1ec;
-  --color-btn: #2985FF;
-  --color-btn-txt: #F5FCFC;
-  --color-border: #12162900;
+  --bg-color: #111315;
+  --bg-muted-color: #bdbdbd;
+  --bg-side-color: #191D1F;
+  --headline-color: #fffffe;
+  --txt-color: #ececec;
+  --txt-muted-color: #b8c1ec;
+  --btn-color: #2985FF;
+  --btn-txt-color: #F5FCFC;
+  --border-color: #2985FF;
   --color-bg-light: #F4F4F4;
   --color-bg-muted-light: #ddd;
   --color-bg-side-light: #FCFCFC;
@@ -55,8 +55,8 @@
   src: url(../../../utilities/Icons/fontawesome-free-6.3.0-web/css/all.css);
 }
 body {
-  background-color: var(--color-bg);
-  color: var(--color-txt);
+  background-color: var(--bg-color);
+  color: var(--txt-color);
   font-family: Arial, sans-serif;
 }
 body .d-none {
@@ -69,7 +69,7 @@ body h4,
 body h5,
 body h6,
 body a {
-  color: var(--color-headline);
+  color: var(--headline-color);
 }
 body p {
   font-family: "Helvetica", sans-serif;
@@ -82,7 +82,7 @@ body ol {
 body button {
   border-radius: 5px;
   min-width: 35px;
-  background-color: var(--color-btn);
+  background-color: var(--btn-color);
   transition: filter 0.2s ease-out;
   border: none;
   overflow: hidden;
@@ -93,19 +93,19 @@ body button:hover {
   /* ubah kecerahan elemen menjadi 80% saat di-hover */
 }
 body.light-mode {
-  --color-bg: var(--color-bg-light);
-  --color-bg-muted: var(--color-bg-muted-light);
-  --color-bg-side: var(--color-bg-side-light);
-  --color-headline: var(--color-headline-light);
-  --color-txt: var(--color-txt-light);
-  --color-txt-muted: var(--color-btn-txt-muted-light);
-  --color-btn: var(--color-btn-light);
-  --color-btn-txt: var(--color-btn-txt-light);
-  --color-border: var(--color-border-light);
+  --bg-color: var(--color-bg-light);
+  --bg-muted-color: var(--color-bg-muted-light);
+  --bg-side-color: var(--color-bg-side-light);
+  --headline-color: var(--color-headline-light);
+  --txt-color: var(--color-txt-light);
+  --txt-muted-color: var(--color-btn-txt-muted-light);
+  --btn-color: var(--color-btn-light);
+  --btn-txt-color: var(--color-btn-txt-light);
+  --border-color: var(--color-border-light);
 }
 
 nav {
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   position: fixed;
   display: flex;
   top: 0;
@@ -155,10 +155,10 @@ nav .dropdown .dropdown-content {
   top: 55px;
   display: none;
   position: absolute;
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  border: 0px 1px 1px 1px solid var(--color-border);
+  border: 0px 1px 1px 1px solid var(--border-color);
 }
 nav .dropdown .dropdown-content a {
   padding: 5px 20px;
@@ -167,7 +167,7 @@ nav .dropdown .dropdown-content a {
   align-items: center;
 }
 nav .dropdown .dropdown-content a:hover {
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
   filter: brightness(0.8);
 }
 nav .dropdown .dropdown-content a span {
@@ -178,7 +178,7 @@ nav .dropdown .user {
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  color: var(--color-headline);
+  color: var(--headline-color);
 }
 nav .dropdown .user .user__img {
   width: 25px;
@@ -209,7 +209,7 @@ nav .dropdown .user .user__name {
   margin-left: 300px;
 }
 .sidebar .sidebar__sidebar {
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   display: flex;
   position: fixed;
   width: 300px;
@@ -233,7 +233,7 @@ nav .dropdown .user .user__name {
   width: 300px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-top .semester {
-  color: var(--color-txt-muted);
+  color: var(--txt-muted-color);
   height: 35px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-top .dark-light-button .theme-toggle {
@@ -293,13 +293,13 @@ nav .dropdown .user .user__name {
   margin-left: 10px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item a:hover {
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item a.active {
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
   margin-left: 10px;
   font-weight: bold;
-  border-left: 5px solid var(--color-border);
+  border-left: 5px solid var(--border-color);
   border-radius: 5px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-header {
@@ -312,10 +312,10 @@ nav .dropdown .user .user__name {
   height: 30px;
   font-size: 12px;
   padding: 0 20px;
-  color: var(--color-headline);
+  color: var(--headline-color);
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-header:hover {
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-header span {
   margin-left: 10px;
@@ -342,8 +342,8 @@ nav .dropdown .user .user__name {
   margin-right: 10px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-content li a:hover {
-  background-color: var(--color-bg-side);
-  color: var(--color-btn);
+  background-color: var(--bg-side-color);
+  color: var(--btn-color);
 }
 .sidebar .sidebar__main {
   width: 100%;
@@ -363,11 +363,11 @@ nav .dropdown .user .user__name {
   padding-bottom: 15px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--border-color);
 }
 .sidebar .sidebar__main .main-header p span {
-  background-color: var(--color-btn);
-  color: var(--color-btn-txt);
+  background-color: var(--btn-color);
+  color: var(--btn-txt-color);
   padding: 5px;
   border-radius: 15px;
 }
@@ -375,7 +375,7 @@ nav .dropdown .user .user__name {
   width: 100%;
   padding: 40px;
   margin: 20px 0;
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   border-radius: 10px;
 }
 .sidebar .sidebar__main .jumbotron .card .card-header {
@@ -397,11 +397,11 @@ nav .dropdown .user .user__name {
 }
 .sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td {
   padding: 10px 0;
-  color: var(--color-headline);
+  color: var(--headline-color);
 }
 
 .sidebar__main.krs .jumbotron {
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   border-radius: 10px;
   margin: 20px 0;
   padding: 40px;
@@ -413,6 +413,7 @@ nav .dropdown .user .user__name {
   position: relative;
   display: inline-block;
   z-index: 1;
+  margin: 10px 15px;
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper::after {
   content: "\f077";
@@ -430,13 +431,13 @@ nav .dropdown .user .user__name {
           appearance: none;
   width: 200px;
   height: 40px;
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
   border: 1px solid #ccc;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  color: var(--color-headline);
+  color: var(--headline-color);
   border-radius: 5px;
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select:focus {
@@ -445,16 +446,16 @@ nav .dropdown .user .user__name {
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select:hover {
   cursor: pointer;
-  background-color: var(--color-bg);
+  background-color: var(--bg-color);
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select option {
   font-weight: normal;
   font-size: 14px;
-  color: var(--color-headline);
+  color: var(--headline-color);
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper .select option:checked {
-  background-color: var(--color-btn);
-  color: var(--color-text);
+  background-color: var(--btn-color);
+  color: var(--text-color);
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .btn {
   margin-left: 20px;
@@ -464,12 +465,13 @@ nav .dropdown .user .user__name {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: var(--color-bg-side);
+  background-color: var(--bg-side-color);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  overflow-x: auto;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -495,20 +497,48 @@ nav .dropdown .user .user__name {
   box-sizing: border-box;
   transition: border-color 0.3s ease-in-out;
 }
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus,
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
+.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus, .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
   outline: none;
   border-color: #2b94b8;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[disabled] {
-  background-color: var(--color-bg-muted);
+  background-color: var(--bg-muted-color);
   cursor: not-allowed;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::-moz-placeholder {
-  color: var(--color-text-muted);
+  color: var(--text-muted-color);
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
-  color: var(--color-text-muted);
+  color: var(--text-muted-color);
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  width: 100%;
+  min-width: 1100px;
+  overflow: auto;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table thead {
+  text-align: center;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table thead tr th {
+  border-bottom: 2px solid var(--border-color);
+  padding: 10px;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr:nth-child(odd) {
+  background-color: var(--bg-color);
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr:nth-child(even):hover {
+  background-color: var(--bg-color);
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td {
+  padding: 15px;
+  border: 1px solid var(--bg-color);
+  text-align: left;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(1), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(2), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(5), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(6), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(7), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(8) {
+  text-align: center;
 }
 
 /* Layar besar (lebar minimum 1200px) */

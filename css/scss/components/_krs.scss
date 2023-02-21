@@ -1,6 +1,6 @@
 .sidebar__main.krs {
    .jumbotron {
-      background-color: var(--color-bg-side);
+      background-color: var(--bg-side-color);
       border-radius: 10px;
       margin: 20px 0;
       padding: 40px;
@@ -12,6 +12,7 @@
             position: relative;
             display: inline-block;
             z-index: 1;
+            margin: 10px 15px;
 
             &::after {
                content: "\f077";
@@ -28,13 +29,13 @@
                appearance: none;
                width: 200px;
                height: 40px;
-               background-color: var(--color-bg);
+               background-color: var(--bg-color);
                border: 1px solid #ccc;
                padding: 10px;
                font-size: 16px;
                font-weight: bold;
                transition: all 0.3s ease-in-out;
-               color: var(--color-headline);
+               color: var(--headline-color);
                border-radius: 5px;
 
                &:focus {
@@ -44,18 +45,18 @@
 
                &:hover {
                   cursor: pointer;
-                  background-color: var(--color-bg);
+                  background-color: var(--bg-color);
                }
 
                & option {
                   font-weight: normal;
                   font-size: 14px;
-                  color: var(--color-headline);
+                  color: var(--headline-color);
                }
 
                & option:checked {
-                  background-color: var(--color-btn);
-                  color: var(--color-text);
+                  background-color: var(--btn-color);
+                  color: var(--text-color);
                }
             }
          }
@@ -71,12 +72,13 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            background-color: var(--color-bg-side);
+            background-color: var(--bg-side-color);
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
+            overflow-x: auto;
 
             &:hover {
                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -85,40 +87,91 @@
             .card-item {
                flex-basis: calc(50% - 20px);
                margin-bottom: 20px;
+
+               & h3 {
+                  margin: 0 0 10px;
+                  font-weight: bold;
+                  font-size: 16px;
+               }
+
+               & input[type="text"] {
+                  display: block;
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 5px;
+                  border: 1px solid #ccc;
+                  font-size: 16px;
+                  color: #555;
+                  background-color: #f2f2f2;
+                  box-sizing: border-box;
+                  transition: border-color 0.3s ease-in-out;
+               }
+
+               & input[type="text"]:focus,
+               & input[type="text"]:active {
+                  outline: none;
+                  border-color: #2b94b8;
+               }
+
+               & input[disabled] {
+                  background-color: var(--bg-muted-color);
+                  cursor: not-allowed;
+               }
+
+               & input::placeholder {
+                  color: var(--text-muted-color);
+               }
             }
 
-            .card-item h3 {
-               margin: 0 0 10px;
-               font-weight: bold;
-               font-size: 16px;
-            }
-
-            .card-item input[type="text"] {
-               display: block;
-               width: 100%;
-               padding: 10px;
+            .krs-table {
+               border: 1px solid var(--border-color);
                border-radius: 5px;
-               border: 1px solid #ccc;
-               font-size: 16px;
-               color: #555;
-               background-color: #f2f2f2;
-               box-sizing: border-box;
-               transition: border-color 0.3s ease-in-out;
-            }
+               color: var(--text-color);
+               width: 100%;
+               min-width: 1100px;
+               overflow: auto;
 
-            .card-item input[type="text"]:focus,
-            .card-item input[type="text"]:active {
-               outline: none;
-               border-color: #2b94b8;
-            }
+               thead {
+                  text-align: center;
 
-            .card-item input[disabled] {
-               background-color: var(--color-bg-muted);
-               cursor: not-allowed;
-            }
+                  tr {
+                     th {
+                        border-bottom: 2px solid var(--border-color);
+                        padding: 10px;
+                     }
+                  }
+               }
 
-            .card-item input::placeholder {
-               color: var(--color-text-muted);
+               tbody {
+                  tr {
+                     &:nth-child(odd) {
+                        background-color: var(--bg-color);
+                     }
+
+                     &:nth-child(even) {
+
+
+                        &:hover {
+                           background-color: var(--bg-color);
+                        }
+                     }
+
+                     td {
+                        padding: 15px;
+                        border: 1px solid var(--bg-color);
+                        text-align: left;
+
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(5),
+                        &:nth-child(6),
+                        &:nth-child(7),
+                        &:nth-child(8) {
+                           text-align: center;
+                        }
+                     }
+                  }
+               }
             }
          }
       }
