@@ -7,12 +7,13 @@
 
       .jumbotron-header {
          display: flex;
+         align-items: center;
 
          .select-wrapper {
             position: relative;
             display: inline-block;
             z-index: 1;
-            margin: 10px 15px;
+            margin: 10px;
 
             &::after {
                content: "\f077";
@@ -64,6 +65,7 @@
          .btn {
             margin-left: 20px;
             width: 100px;
+            height: 30px;
          }
       }
 
@@ -72,8 +74,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            background-color: var(--bg-side-color);
-            border-radius: 10px;
+            border: 1px solid rgb(88, 88, 88);
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -123,13 +124,13 @@
                }
             }
 
+            p {
+               margin: 10px 0;
+            }
+
             .krs-table {
                border: 1px solid var(--border-color);
-               border-radius: 5px;
-               color: var(--text-color);
-               width: 100%;
                min-width: 1100px;
-               overflow: auto;
 
                thead {
                   text-align: center;
@@ -144,22 +145,10 @@
 
                tbody {
                   tr {
-                     &:nth-child(odd) {
-                        background-color: var(--bg-color);
-                     }
-
-                     &:nth-child(even) {
-
-
-                        &:hover {
-                           background-color: var(--bg-color);
-                        }
-                     }
-
                      td {
                         padding: 15px;
-                        border: 1px solid var(--bg-color);
                         text-align: left;
+                        border: 1px solid var(--bg-color);
 
                         &:nth-child(1),
                         &:nth-child(2),

@@ -62,6 +62,21 @@ body {
 body .d-none {
   display: none;
 }
+body .border-td-border td {
+  border: 1px solid var(--bg-color);
+}
+body .border-no-space {
+  border-spacing: 0;
+}
+body .border-striped tr:nth-child(odd) {
+  background-color: var(--bg-color);
+}
+body .border-striped tr:nth-child(even):hover {
+  background-color: var(--bg-color);
+}
+body .text-center {
+  text-align: center;
+}
 body h1,
 body h2,
 body h3,
@@ -91,6 +106,9 @@ body button:hover {
   cursor: pointer;
   filter: brightness(0.8);
   /* ubah kecerahan elemen menjadi 80% saat di-hover */
+}
+body .btn-success {
+  background-color: #29ff89;
 }
 body.light-mode {
   --bg-color: var(--color-bg-light);
@@ -198,6 +216,32 @@ nav .dropdown .user .user__name {
   margin: 0 5px;
 }
 
+.card {
+  width: 100%;
+  padding: 40px;
+  margin: 20px 0;
+  background-color: var(--bg-side-color);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  color: var(--text-color);
+  overflow: auto;
+  border-radius: 5px;
+  min-width: 1100px;
+}
+table thead tr th {
+  border-bottom: 1px solid var(--border-color);
+  border-collapse: collapse;
+  font-weight: bold;
+  padding: 10px 0;
+}
+table tbody tr td {
+  padding: 10px 0;
+  color: var(--headline-color);
+}
+
 .sidebar {
   display: flex;
   margin-top: 55px;
@@ -302,13 +346,22 @@ nav .dropdown .user .user__name {
   border-left: 5px solid var(--border-color);
   border-radius: 5px;
 }
+.sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item {
+  margin: 8px 0;
+}
+.sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item.active {
+  background-color: var(--bg-color);
+  margin-left: 10px;
+  font-weight: bold;
+  border-left: 5px solid var(--border-color);
+  border-radius: 5px;
+}
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-header {
   cursor: pointer;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 8px 0;
   height: 30px;
   font-size: 12px;
   padding: 0 20px;
@@ -371,13 +424,6 @@ nav .dropdown .user .user__name {
   padding: 5px;
   border-radius: 15px;
 }
-.sidebar .sidebar__main .jumbotron .card {
-  width: 100%;
-  padding: 40px;
-  margin: 20px 0;
-  background-color: var(--bg-side-color);
-  border-radius: 10px;
-}
 .sidebar .sidebar__main .jumbotron .card .card-header {
   margin-bottom: 20px;
 }
@@ -385,19 +431,14 @@ nav .dropdown .user .user__name {
   overflow-x: auto;
 }
 .sidebar .sidebar__main .jumbotron .card .card-body table {
-  width: 100%;
   text-align: left;
   min-width: 900px;
 }
-.sidebar .sidebar__main .jumbotron .card .card-body table thead tr th {
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
-  font-weight: bold;
-  padding: 10px 0;
+.sidebar .sidebar__main .jumbotron .card .card-body table thead tr th:nth-child(1), .sidebar .sidebar__main .jumbotron .card .card-body table thead tr th:nth-child(5) {
+  text-align: center;
 }
-.sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td {
-  padding: 10px 0;
-  color: var(--headline-color);
+.sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td:nth-child(1), .sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td:nth-child(5) {
+  text-align: center;
 }
 
 .sidebar__main.krs .jumbotron {
@@ -408,12 +449,13 @@ nav .dropdown .user .user__name {
 }
 .sidebar__main.krs .jumbotron .jumbotron-header {
   display: flex;
+  align-items: center;
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper {
   position: relative;
   display: inline-block;
   z-index: 1;
-  margin: 10px 15px;
+  margin: 10px;
 }
 .sidebar__main.krs .jumbotron .jumbotron-header .select-wrapper::after {
   content: "\f077";
@@ -460,13 +502,13 @@ nav .dropdown .user .user__name {
 .sidebar__main.krs .jumbotron .jumbotron-header .btn {
   margin-left: 20px;
   width: 100px;
+  height: 30px;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: var(--bg-side-color);
-  border-radius: 10px;
+  border: 1px solid rgb(88, 88, 88);
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -511,13 +553,12 @@ nav .dropdown .user .user__name {
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
   color: var(--text-muted-color);
 }
+.sidebar__main.krs .jumbotron .jumbotron-main .card p {
+  margin: 10px 0;
+}
 .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table {
   border: 1px solid var(--border-color);
-  border-radius: 5px;
-  color: var(--text-color);
-  width: 100%;
   min-width: 1100px;
-  overflow: auto;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table thead {
   text-align: center;
@@ -526,16 +567,10 @@ nav .dropdown .user .user__name {
   border-bottom: 2px solid var(--border-color);
   padding: 10px;
 }
-.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr:nth-child(odd) {
-  background-color: var(--bg-color);
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr:nth-child(even):hover {
-  background-color: var(--bg-color);
-}
 .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td {
   padding: 15px;
-  border: 1px solid var(--bg-color);
   text-align: left;
+  border: 1px solid var(--bg-color);
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(1), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(2), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(5), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(6), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(7), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(8) {
   text-align: center;
@@ -599,6 +634,9 @@ nav .dropdown .user .user__name {
   .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item a.active {
     margin-left: 0;
   }
+  .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item.active {
+    margin-left: 0;
+  }
   .sidebar .sidebar__main {
     padding: 5px;
     text-align: center;
@@ -622,6 +660,9 @@ nav .dropdown .user .user__name {
   .sidebar .sidebar__main.krs .jumbotron {
     padding: 10px;
   }
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-header .btn {
+    margin-left: 0px;
+  }
   .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card {
     display: block;
     padding: 20px;
@@ -633,31 +674,8 @@ nav .dropdown .user .user__name {
     font-weight: 600;
     font-size: 14px;
   }
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    color: #555;
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease-in-out;
-  }
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus,
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
-    outline: none;
-    border-color: #2b94b8;
-  }
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[disabled] {
-    background-color: var(--color-bg-muted);
-    cursor: not-allowed;
-  }
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::-moz-placeholder {
-    color: var(--color-text-muted);
-  }
-  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
-    color: var(--color-text-muted);
+  .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card p {
+    font-size: 14px;
+    text-align: start;
   }
 }/*# sourceMappingURL=style.css.map */

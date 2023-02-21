@@ -77,20 +77,20 @@
                </div>
 
                <div class="sidebar-item">
-                  <a href="" class="active">
+                  <a href="krs.html" class="">
                      <i class="fa-solid fa-book-bookmark"></i>
                      <span>KRS</span>
                   </a>
                </div>
 
-               <div class="sidebar-item accordion-item">
+               <div class="sidebar-item accordion-item active">
                   <div class="accordion-header" data-id="1">
                      <i class="fa-solid fa-folder-open"></i>
                      <span>Perkuliahan</span>
                      <i id="chevron1" class="fa-solid fa-chevron-right"></i>
                   </div>
                   <ul class="accordion-content">
-                     <li><a href="jadwal-kuliah.html"><i class="bi bi-arrow-right"></i>Jadwal Kuliah</a></li>
+                     <li><a href=""><i class="bi bi-arrow-right"></i>Jadwal Kuliah</a></li>
                      <li><a href=""><i class="bi bi-arrow-right"></i>jadwal UTS</a></li>
                      <li><a href=""><i class="bi bi-arrow-right"></i>Jadwal UAS</a></li>
                      <li><a href=""><i class="bi bi-arrow-right"></i>Daftar Nilai</a></li>
@@ -136,15 +136,16 @@
 
       <!-- Main -->
       <main class="sidebar__main krs">
-         <h2>Kartu Rencana Studi</h2>
+         <h2>Jadwal Kuliah</h2>
          <div class="main-header">
             <p>
-               Proses Kontrak Matakuliah Mahasiswa
+               Jadwal Kuliah
             </p>
             <div aria-label="breadcrumb" class="breadcrumb">
                <ol>
                   <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill"></i></a></li>/
-                  <li class="breadcrumb-item active">KRS</li>
+                  <li class="breadcrumb-item">Perkuliahan</li>/
+                  <li class="breadcrumb-item active"> Jadwal Kuliah</li>
                </ol>
             </div>
          </div>
@@ -152,91 +153,58 @@
             <div class="jumbotron-header">
                <div class="select-wrapper">
                   <select class="select">
-                     <option value="option1">-Semua Semester-</option>
-                     <option value="option1">Semester 2</option>
-                     <option value="option1">Semester 4</option>
-                     <option value="option1">Semester 6</option>
-                     <option value="option1">Semester 8</option>
-                  </select>
-               </div>
-               <div class="select-wrapper">
-                  <select class="select">
                      <option value="option1">2022/2023 Genap</option>
                      <option value="option2">2022/2023 Antara</option>
                   </select>
                </div>
+               <div class="select-wrapper">
+                  <select class="select">
+                     <option value="option1">-Semua Hari-</option>
+                     <option value="option1">Senin</option>
+                     <option value="option1">Selasa</option>
+                     <option value="option1">Rabu</option>
+                     <option value="option1">Kamis</option>
+                     <option value="option1">Jumat</option>
+                     <option value="option1">Sabtu</option>
+                     <option value="option1">Minggu</option>
+                  </select>
+               </div>
                <button class="btn"><i class="fa-solid fa-filter"></i> <span>Filter</span></button>
-               <button class="btn btn-success"><i class="fa-solid fa-save"></i> <span>Save</span></button>
             </div>
             <div class="jumbotron-main">
                <div class="card">
-                  <div class="card-item">
-                     <h3>NIM :</h3>
-                     <input type="text" placeholder="202010225175" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Nama :</h3>
-                     <input type="text" placeholder="IQBAL FARIS AKBAR" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Program Studi :</h3>
-                     <input type="text" placeholder="S1 INFORMATIKA" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Kelas :
-                     </h3>
-                     <input type="text" placeholder="A" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>I P S Sebelumnya :</h3>
-                     <input type="text" placeholder="3.47" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Semester :</h3>
-                     <input type="text" placeholder="6" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Peminatan :</h3>
-                     <input type="text" placeholder="Pemrograman Software" name="inputName" disabled>
-                  </div>
-                  <div class="card-item">
-                     <h3>Pembimbing Akademik :</h3>
-                     <input type="text" placeholder="Tri Dharma Putra, S.T., M.Sc." name="inputName" disabled>
-                  </div>
-               </div>
-               <div class="card">
-                  <p>Total SKS Yang Telah Diambil : <b>17</b></p>
-                  <table id="myTable" class="krs-table">
+                  <table id="myTable">
                      <thead>
-                        <tr>
+                        <tr class="text-center">
                            <th>No</th>
-                           <th>Pilih</th>
                            <th>Nama Kelas</th>
                            <th>Mata Kuliah</th>
-                           <th>Jadwal</th>
-                           <th>Semester</th>
-                           <th>Jml Peseta</th>
-                           <th>Peminatan</th>
+                           <th>Dosen</th>
+                           <th>Hari</th>
+                           <th>Ruangan</th>
                         </tr>
                      </thead>
                      <tbody class="border-striped">
-                        <tr>
-                           <td></td>
+                        <tr class="text-center border-td-border">
                            <td>2HIND</td>
-                           <td>MKWU-1003 - Pendidikan Agama 2 sks gabungan</td>
-                           <td>Sabtu, 08:00:00 - 09:40:00 A</td>
-                           <td>1</td>
-                           <td>1</td>
-                           <td>Tidak</td>
+                           <td>MKWU-1003 - Pendidikan Agama</td>
+                           <td>Mugiarso, S.Kom., M.Kom</td>
+                           <td>Sabtu, 08:00:00 - 09:40:00</td>
+                           <td>SS-407</td>
                         </tr>
-                        <tr>
-                           <td></td>
+                        <tr class="text-center border-td-border">
                            <td>2HIND</td>
-                           <td>MKWU-1003 - Pendidikan Agama 2 sks gabungan</td>
-                           <td>Sabtu, 08:00:00 - 09:40:00 A</td>
-                           <td>1</td>
-                           <td>1</td>
-                           <td>Tidak</td>
+                           <td>MKWU-1003 - Pendidikan Agama</td>
+                           <td>Mugiarso, S.Kom., M.Kom</td>
+                           <td>Sabtu, 08:00:00 - 09:40:00</td>
+                           <td>SS-407</td>
+                        </tr>
+                        <tr class="text-center border-td-border">
+                           <td>2HIND</td>
+                           <td>MKWU-1003 - Pendidikan Agama</td>
+                           <td>Mugiarso, S.Kom., M.Kom</td>
+                           <td>Sabtu, 08:00:00 - 09:40:00</td>
+                           <td>SS-407</td>
                         </tr>
                      </tbody>
                   </table>

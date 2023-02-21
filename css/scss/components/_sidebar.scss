@@ -124,6 +124,15 @@
                }
 
                &.accordion-item {
+                  margin: 8px 0;
+
+                  &.active {
+                     background-color: var(--bg-color);
+                     margin-left: 10px;
+                     font-weight: bold;
+                     border-left: 5px solid var(--border-color);
+                     border-radius: 5px;
+                  }
 
                   .accordion-header {
                      cursor: pointer;
@@ -131,7 +140,6 @@
                      align-items: center;
                      flex-wrap: wrap;
                      width: 100%;
-                     margin: 8px 0;
                      height: 30px;
                      font-size: 12px;
                      padding: 0 20px;
@@ -218,12 +226,6 @@
 
       .jumbotron {
          .card {
-            width: 100%;
-            padding: 40px;
-            margin: 20px 0;
-            background-color: var(--bg-side-color);
-            border-radius: 10px;
-
             .card-header {
                margin-bottom: 20px;
             }
@@ -232,17 +234,17 @@
                overflow-x: auto;
 
                table {
-                  width: 100%;
                   text-align: left;
                   min-width: 900px;
 
                   thead {
                      tr {
                         th {
-                           border-bottom: 1px solid black;
-                           border-collapse: collapse;
-                           font-weight: bold;
-                           padding: 10px 0;
+
+                           &:nth-child(1),
+                           &:nth-child(5) {
+                              text-align: center;
+                           }
                         }
                      }
                   }
@@ -250,8 +252,11 @@
                   tbody {
                      tr {
                         td {
-                           padding: 10px 0;
-                           color: var(--headline-color);
+
+                           &:nth-child(1),
+                           &:nth-child(5) {
+                              text-align: center;
+                           }
                         }
                      }
                   }

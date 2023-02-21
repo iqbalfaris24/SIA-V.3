@@ -91,6 +91,12 @@
                         margin-left: 0;
                      }
                   }
+
+                  &.accordion-item {
+                     &.active {
+                        margin-left: 0;
+                     }
+                  }
                }
             }
          }
@@ -128,7 +134,11 @@
          .jumbotron {
             padding: 10px;
 
-
+            .jumbotron-header {
+               .btn {
+                  margin-left: 0px;
+               }
+            }
 
             .jumbotron-main {
                .card {
@@ -143,32 +153,9 @@
                      font-size: 14px;
                   }
 
-                  .card-item input[type="text"] {
-                     display: block;
-                     width: 100%;
-                     padding: 10px;
-                     border-radius: 5px;
-                     border: 1px solid #ccc;
-                     font-size: 16px;
-                     color: #555;
-                     background-color: #f2f2f2;
-                     box-sizing: border-box;
-                     transition: border-color 0.3s ease-in-out;
-                  }
-
-                  .card-item input[type="text"]:focus,
-                  .card-item input[type="text"]:active {
-                     outline: none;
-                     border-color: #2b94b8;
-                  }
-
-                  .card-item input[disabled] {
-                     background-color: var(--color-bg-muted);
-                     cursor: not-allowed;
-                  }
-
-                  .card-item input::placeholder {
-                     color: var(--color-text-muted);
+                  p {
+                     font-size: 14px;
+                     text-align: start;
                   }
                }
             }
