@@ -1,10 +1,5 @@
 .sidebar__main.krs {
    .jumbotron {
-      background-color: var(--bg-side-color);
-      border-radius: 10px;
-      margin: 20px 0;
-      padding: 40px;
-
       .jumbotron-header {
          display: flex;
          align-items: center;
@@ -77,13 +72,8 @@
             border: 1px solid rgb(88, 88, 88);
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
             overflow-x: auto;
-
-            &:hover {
-               box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-            }
 
             .card-item {
                flex-basis: calc(50% - 20px);

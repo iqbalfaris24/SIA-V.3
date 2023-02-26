@@ -135,17 +135,66 @@ nav {
   align-items: center;
   z-index: 2;
   box-shadow: 0px 2px 28px -15px #000000;
+  overflow: hidden;
 }
 nav .menu {
   display: flex;
   align-items: center;
 }
-nav .menu .btn-menu {
-  display: block;
-  padding-top: 3px;
-  height: -moz-fit-content;
-  height: fit-content;
+nav .menu .menu-button-lg {
+  align-items: center;
   margin-right: 20px;
+  padding-top: 3px;
+}
+nav .menu .menu-button-sm {
+  display: none;
+}
+nav .menu .menu-button-sm .cross .btn-menu-check {
+  display: none;
+  margin-right: 20px;
+}
+nav .menu .menu-button-sm .cross label {
+  display: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+nav .menu .menu-button-sm .cross path {
+  fill: none;
+  stroke: var(--btn-color);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+nav .menu .menu-button-sm .cross input:checked + svg .line--1, nav .menu .menu-button-sm .cross input:checked + svg .line--3 {
+  --length: 22.627416998;
+}
+nav .menu .menu-button-sm .cross input:checked + svg .line--2 {
+  --length: 0;
+}
+nav .menu .menu-button-sm .cross .back input:checked + svg .line--1,
+nav .menu .menu-button-sm .cross .back input:checked + svg .line--3 {
+  --length: 8.602325267;
+}
+nav .menu .menu-button-sm .cross .line--1,
+nav .menu .menu-button-sm .cross .line--3 {
+  --total-length: 126.64183044433594;
+}
+nav .menu .menu-button-sm .cross .line--2 {
+  --total-length: 70;
+}
+nav .menu .menu-button-sm .cross input:checked + svg .line--1,
+nav .menu .menu-button-sm .cross input:checked + svg .line--3 {
+  --offset: -94.1149185097;
+}
+nav .menu .menu-button-sm .cross input:checked + svg .line--2 {
+  --offset: -50;
 }
 nav .brand a {
   display: flex;
@@ -209,6 +258,14 @@ nav .dropdown .user .user__name {
   margin: 0 10px;
 }
 
+@media screen and (max-width: 1199px) {
+  nav .menu .menu-button-lg {
+    display: none;
+  }
+  nav .menu .menu-button-sm {
+    display: block;
+  }
+}
 .breadcrumb ol {
   display: flex;
 }
@@ -222,6 +279,10 @@ nav .dropdown .user .user__name {
   margin: 20px 0;
   background-color: var(--bg-side-color);
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 0 10px 0 rgba(66, 66, 66, 0.2);
 }
 
 table {
@@ -324,11 +385,13 @@ table tbody tr td {
   width: 300px;
   padding-bottom: 200px;
 }
+.sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item {
+  margin: 10px 0;
+}
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item a {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  margin: 8px 0;
   height: 30px;
   font-size: 12px;
   padding: 0 20px;
@@ -346,15 +409,13 @@ table tbody tr td {
   border-left: 5px solid var(--border-color);
   border-radius: 5px;
 }
-.sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item {
-  margin: 8px 0;
-}
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item.active {
   background-color: var(--bg-color);
   margin-left: 10px;
   font-weight: bold;
   border-left: 5px solid var(--border-color);
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-header {
   cursor: pointer;
@@ -386,6 +447,9 @@ table tbody tr td {
   display: flex;
   margin-left: 25px;
   text-align: left;
+}
+.sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-content li.active a {
+  color: var(--btn-color);
 }
 .sidebar .sidebar__sidebar .sidebar-content .sidebar-nav-bottom .sidebar-item.accordion-item .accordion-content li a {
   margin: 0;
@@ -441,12 +505,6 @@ table tbody tr td {
   text-align: center;
 }
 
-.sidebar__main.krs .jumbotron {
-  background-color: var(--bg-side-color);
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 40px;
-}
 .sidebar__main.krs .jumbotron .jumbotron-header {
   display: flex;
   align-items: center;
@@ -511,12 +569,8 @@ table tbody tr td {
   border: 1px solid rgb(88, 88, 88);
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   overflow-x: auto;
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item {
   flex-basis: calc(50% - 20px);

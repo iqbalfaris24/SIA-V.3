@@ -142,16 +142,81 @@ nav {
    z-index: 2;
    -webkit-box-shadow: 0px 2px 28px -15px #000000;
    box-shadow: 0px 2px 28px -15px #000000;
+   overflow: hidden;
 
    .menu {
       display: flex;
       align-items: center;
 
-      .btn-menu {
-         display: block;
-         padding-top: 3px;
-         height: fit-content;
+      .menu-button-lg {
+         align-items: center;
          margin-right: 20px;
+         padding-top: 3px;
+      }
+
+      .menu-button-sm {
+         display: none;
+
+         .cross {
+            .btn-menu-check {
+               display: none;
+               margin-right: 20px;
+            }
+
+            label {
+               display: none;
+               cursor: pointer;
+               width: 50px;
+               height: 50px;
+               display: block;
+            }
+
+
+            path {
+               fill: none;
+               stroke: var(--btn-color);
+               stroke-width: 5;
+               stroke-linecap: round;
+               stroke-linejoin: round;
+               --length: 24;
+               --offset: -38;
+               stroke-dasharray: var(--length) var(--total-length);
+               stroke-dashoffset: var(--offset);
+               transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+
+            & input:checked+svg .line--1,
+            & input:checked+svg .line--3 {
+               --length: 22.627416998;
+            }
+
+            & input:checked+svg .line--2 {
+               --length: 0;
+            }
+
+            .back input:checked+svg .line--1,
+            .back input:checked+svg .line--3 {
+               --length: 8.602325267;
+            }
+
+            .line--1,
+            .line--3 {
+               --total-length: 126.64183044433594;
+            }
+
+            .line--2 {
+               --total-length: 70;
+            }
+
+            input:checked+svg .line--1,
+            input:checked+svg .line--3 {
+               --offset: -94.1149185097;
+            }
+
+            input:checked+svg .line--2 {
+               --offset: -50;
+            }
+         }
       }
    }
 
@@ -233,6 +298,20 @@ nav {
    }
 }
 
+@media screen and (max-width: 1199px) {
+   nav {
+      .menu {
+         .menu-button-lg {
+            display: none;
+         }
+
+         .menu-button-sm {
+            display: block;
+         }
+      }
+   }
+}
+
 .breadcrumb {
    ol {
       display: flex;
@@ -249,6 +328,11 @@ nav {
    margin: 20px 0;
    background-color: var(--bg-side-color);
    border-radius: 10px;
+   transition: all 0.3s ease-in-out;
+
+   &:hover {
+      box-shadow: 0 0 10px 0 rgba(66, 66, 66, 0.2);
+   }
 }
 
 table {
