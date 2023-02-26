@@ -135,7 +135,6 @@ nav {
   align-items: center;
   z-index: 2;
   box-shadow: 0px 2px 28px -15px #000000;
-  overflow: hidden;
 }
 nav .menu {
   display: flex;
@@ -163,7 +162,7 @@ nav .menu .menu-button-sm .cross label {
 nav .menu .menu-button-sm .cross path {
   fill: none;
   stroke: var(--btn-color);
-  stroke-width: 5;
+  stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
   --length: 24;
@@ -259,6 +258,9 @@ nav .dropdown .user .user__name {
 }
 
 @media screen and (max-width: 1199px) {
+  nav {
+    box-shadow: none;
+  }
   nav .menu .menu-button-lg {
     display: none;
   }
