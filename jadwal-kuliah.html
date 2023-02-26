@@ -16,9 +16,21 @@
    <!-- Navigasi -->
    <nav>
       <div class="menu">
-         <button class="btn-menu">
+         <button class="btn-menu menu-button-lg">
             <i data-feather="menu"></i>
          </button>
+         <div class="menu-button-sm">
+            <div class="cross menu--1">
+               <label>
+                  <input type="checkbox" class="btn-menu-check">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                     <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+                     <path class="line--2" d="M0 50h70" />
+                     <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+                  </svg>
+               </label>
+            </div>
+         </div>
          <h4>Universitas Bhayangkara Jakarta Raya</h4>
       </div>
 
@@ -235,9 +247,13 @@
       function ButtonSidebar() {
          feather.replace();
          const btnMenu = document.querySelector(".btn-menu");
+         const btnMenuC = document.querySelector(".btn-menu-check");
          const sidebar = document.querySelector(".sidebar");
 
          btnMenu.addEventListener("click", function () {
+            sidebar.classList.toggle("sidebar--show");
+         });
+         btnMenuC.addEventListener("click", function () {
             sidebar.classList.toggle("sidebar--show");
          });
       }
