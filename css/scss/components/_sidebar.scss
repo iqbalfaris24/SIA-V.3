@@ -200,7 +200,7 @@
    .sidebar__main {
       width: 100%;
       padding: 35px 50px;
-      transition: all 0.3s ease-out;
+      transition: 0.3s;
       overflow: hidden;
       overflow-x: hidden;
 
@@ -271,4 +271,6 @@
          }
       }
    }
+
+
 }

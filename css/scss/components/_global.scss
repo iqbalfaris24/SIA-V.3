@@ -41,6 +41,7 @@ body {
    background-color: var(--bg-color);
    color: var(--txt-color);
    font-family: Arial, sans-serif;
+   overflow-x: hidden;
 
    .d-none {
       display: none;

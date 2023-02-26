@@ -58,6 +58,7 @@ body {
   background-color: var(--bg-color);
   color: var(--txt-color);
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 body .d-none {
   display: none;
@@ -468,7 +469,7 @@ table tbody tr td {
 .sidebar .sidebar__main {
   width: 100%;
   padding: 35px 50px;
-  transition: all 0.3s ease-out;
+  transition: 0.3s;
   overflow: hidden;
   overflow-x: hidden;
 }

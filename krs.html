@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="css/scss/style.css" />
    <link rel="stylesheet" href="utilities/Icons/fontawesome-free-6.3.0-web/css/all.css" />
    <link rel="stylesheet" href="utilities/Icons/bootstrap-icons-1.9.0/bootstrap-icons.css" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <script src="utilities/Icons/feather.min.js"></script>
    <title>Admin</title>
 </head>
@@ -67,7 +68,7 @@
    <div class="sidebar sidebar--show">
       <!-- Sidebar -->
       <aside class="sidebar__sidebar">
-         <div class="sidebar-content">
+         <div class="sidebar-content" data-aos="fade-right">
             <div class="sidebar-nav-top">
                <div class="semester">
                   <i class="fa-solid fa-calendar-days"></i>
@@ -105,7 +106,7 @@
                      <li><a href="jadwal-kuliah.html"><i class="bi bi-arrow-right"></i>Jadwal Kuliah</a></li>
                      <li><a href="jadwal-uts.html"><i class="bi bi-arrow-right"></i>Jadwal UTS</a></li>
                      <li><a href="jadwal-uas.html"><i class="bi bi-arrow-right"></i>Jadwal UAS</a></li>
-                     <li><a href="daftar-nilai.html"><i class="bi bi-arrow-right"></i>Daftar Nilai</a></li>
+                     <li><a href="nilai-uts.html"><i class="bi bi-arrow-right"></i>Nilai UTS</a></li>
                      <li><a href="krs-full.html"><i class="bi bi-arrow-right"></i>KRS</a></li>
                      <li><a href="khs.html"><i class="bi bi-arrow-right"></i>KHS</a></li>
                      <li><a href="presensi.html"><i class="bi bi-arrow-right"></i>Presensi</a></li>
@@ -148,8 +149,8 @@
 
       <!-- Main -->
       <main class="sidebar__main krs">
-         <h2>Kartu Rencana Studi</h2>
-         <div class="main-header">
+         <h2 data-aos="fade-left">Kartu Rencana Studi</h2>
+         <div class="main-header" data-aos="fade-left">
             <p>
                Proses Kontrak Matakuliah Mahasiswa
             </p>
@@ -160,7 +161,7 @@
                </ol>
             </div>
          </div>
-         <div class=" card jumbotron">
+         <div class=" card jumbotron" data-aos="fade-left">
             <div class="jumbotron-header">
                <div class="select-wrapper">
                   <select class="select">
@@ -355,6 +356,10 @@
       }
       TableNumber();
 
+   </script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init();
    </script>
 </body>
 
