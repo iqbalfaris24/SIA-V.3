@@ -283,9 +283,10 @@ nav .dropdown .user .user__name {
   margin: 20px 0;
   background-color: var(--bg-side-color);
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
 }
 .card:hover {
+  transition: all 0.3s ease-out;
   box-shadow: 0 0 10px 0 rgba(66, 66, 66, 0.2);
 }
 
@@ -469,7 +470,7 @@ table tbody tr td {
 .sidebar .sidebar__main {
   width: 100%;
   padding: 35px 50px;
-  transition: 0.3s;
+  transition: all 0.3s ease-out;
   overflow: hidden;
   overflow-x: hidden;
 }
@@ -507,6 +508,53 @@ table tbody tr td {
 }
 .sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td:nth-child(1), .sidebar .sidebar__main .jumbotron .card .card-body table tbody tr td:nth-child(5) {
   text-align: center;
+}
+.sidebar .sidebar__main .content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  transition: all 1s ease-in-out;
+}
+.sidebar .sidebar__main .content .card.card-feature {
+  flex: 1;
+  margin: 30px 10px;
+  transition: all 1s ease-in-out;
+}
+.sidebar .sidebar__main .content .card.card-feature:nth-child(1) {
+  background-color: #28AB08;
+}
+.sidebar .sidebar__main .content .card.card-feature:nth-child(2) {
+  background-color: #F16D0D;
+}
+.sidebar .sidebar__main .content .card.card-feature:hover .card-item .card-icon {
+  margin-bottom: 100px;
+}
+.sidebar .sidebar__main .content .card.card-feature .card-item {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+.sidebar .sidebar__main .content .card.card-feature .card-item h3 {
+  margin-top: 20px;
+  color: black;
+}
+.sidebar .sidebar__main .content .card.card-feature .card-item .card-icon {
+  position: absolute;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--btn-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 3px solid var(--bg-color);
+}
+.sidebar .sidebar__main .content .card.card-feature .card-item .card-icon i {
+  font-size: 40px;
 }
 
 .sidebar__main.krs .jumbotron .jumbotron-header {
@@ -566,6 +614,9 @@ table tbody tr td {
   width: 100px;
   height: 30px;
 }
+.sidebar__main.krs .jumbotron .jumbotron-main {
+  transition: all 0.3s ease-out;
+}
 .sidebar__main.krs .jumbotron .jumbotron-main .card {
   display: flex;
   justify-content: space-between;
@@ -573,12 +624,12 @@ table tbody tr td {
   border: 1px solid rgb(88, 88, 88);
   padding: 20px;
   margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
   overflow-x: auto;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item {
   flex-basis: calc(50% - 20px);
   margin-bottom: 20px;
+  transition: all 0.3s ease-out;
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item h3 {
   margin: 0 0 10px;

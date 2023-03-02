@@ -332,9 +332,10 @@ nav {
    margin: 20px 0;
    background-color: var(--bg-side-color);
    border-radius: 10px;
-   transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-out;
 
    &:hover {
+      transition: all 0.3s ease-out;
       box-shadow: 0 0 10px 0 rgba(66, 66, 66, 0.2);
    }
 }

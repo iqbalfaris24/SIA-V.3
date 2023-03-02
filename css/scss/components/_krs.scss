@@ -65,6 +65,8 @@
       }
 
       .jumbotron-main {
+         transition: all 0.3s ease-out;
+
          .card {
             display: flex;
             justify-content: space-between;
@@ -72,12 +74,12 @@
             border: 1px solid rgb(88, 88, 88);
             padding: 20px;
             margin-bottom: 20px;
-            transition: all 0.3s ease-in-out;
             overflow-x: auto;
 
             .card-item {
                flex-basis: calc(50% - 20px);
                margin-bottom: 20px;
+               transition: all 0.3s ease-out;
 
                & h3 {
                   margin: 0 0 10px;

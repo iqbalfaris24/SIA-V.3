@@ -200,7 +200,7 @@
    .sidebar__main {
       width: 100%;
       padding: 35px 50px;
-      transition: 0.3s;
+      transition: all 0.3s ease-out;
       overflow: hidden;
       overflow-x: hidden;
 
@@ -270,7 +270,65 @@
             }
          }
       }
+
+      .content {
+         display: flex;
+         flex-wrap: wrap;
+         margin-top: 75px;
+         transition: all 1s ease-in-out;
+
+         .card.card-feature {
+            flex: 1;
+            margin: 30px 10px;
+            transition: all 1s ease-in-out;
+
+            &:nth-child(1) {
+               background-color: #28AB08;
+            }
+
+            &:nth-child(2) {
+               background-color: #F16D0D;
+            }
+
+            &:hover {
+               .card-item {
+                  .card-icon {
+                     margin-bottom: 100px;
+                  }
+               }
+            }
+
+            .card-item {
+               color: black;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               transition: all 1s ease-in-out;
+
+               h3 {
+                  margin-top: 20px;
+                  color: black;
+               }
+
+               .card-icon {
+                  position: absolute;
+                  margin-bottom: 120px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100%;
+                  background-color: var(--btn-color);
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 100%;
+                  border: 3px solid var(--bg-color);
+
+                  i {
+                     font-size: 40px;
+                  }
+               }
+            }
+         }
+      }
    }
-
-
 }
