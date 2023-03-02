@@ -275,12 +275,10 @@
          display: flex;
          flex-wrap: wrap;
          margin-top: 75px;
-         transition: all 1s ease-in-out;
 
          .card.card-feature {
             flex: 1;
             margin: 30px 10px;
-            transition: all 1s ease-in-out;
 
             &:nth-child(1) {
                background-color: #28AB08;
@@ -290,7 +288,12 @@
                background-color: #F16D0D;
             }
 
+            &:nth-child(3) {
+               background-color: #01786D;
+            }
+
             &:hover {
+
                .card-item {
                   .card-icon {
                      margin-bottom: 100px;
@@ -303,7 +306,7 @@
                display: flex;
                justify-content: center;
                align-items: center;
-               transition: all 1s ease-in-out;
+               transition: all 0.3s ease-in-out;
 
                h3 {
                   margin-top: 20px;
@@ -313,6 +316,7 @@
                .card-icon {
                   position: absolute;
                   margin-bottom: 120px;
+                  transition: all 0.4s ease-in-out;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -325,6 +329,10 @@
 
                   i {
                      font-size: 40px;
+                  }
+
+                  img {
+                     width: 40px;
                   }
                }
             }
