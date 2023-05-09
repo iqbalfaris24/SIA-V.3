@@ -149,10 +149,9 @@
       </aside>
 
       <!-- Main -->
-      <main class="sidebar__main krs">
-         <h2 data-aos="fade-left">Transkip Nilai</h2>
-
-         <div class=" card jumbotron" data-aos="fade-left">
+      <main class="sidebar__main presensi-online">
+         <h2 data-aos="fade-left">Input Presensi Online</h2>
+         <div class="card" data-aos="fade-left">
             <div class="card-item">
                <h3>Nama :</h3>
                <input type="text" placeholder="IQBAL FARIS AKBAR" name="inputName" disabled>
@@ -162,8 +161,22 @@
                <input type="text" placeholder="202010225175" name="inputName" disabled>
             </div>
             <div class="card-item">
+               <h3>Status :</h3>
+               <div class="select-wrapper">
+                  <select class="select">
+                     <option value="option1">Hadir</option>
+                     <option value="option1">Sakit</option>
+                     <option value="option1">Izin</option>
+                  </select>
+               </div>
+            </div>
+            <div class="card-item">
                <h3>kode Presensi :</h3>
                <input type="number" placeholder="" name="kode-presensi">
+            </div>
+            <div class="card-item">
+               <h3>Keterangan :</h3>
+               <textarea id="ket" name="ket"></textarea>
             </div>
          </div>
       </main>

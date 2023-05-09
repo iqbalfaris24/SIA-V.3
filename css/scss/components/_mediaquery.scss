@@ -161,5 +161,18 @@
             }
          }
       }
+
+      .sidebar__main.presensi-online {
+         .card {
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+
+            .card-item {
+               h3 {
+                  text-align: left;
+               }
+            }
+         }
+      }
    }
 }

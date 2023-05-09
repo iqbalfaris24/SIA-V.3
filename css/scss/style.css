@@ -45,6 +45,16 @@
   border-radius: 5px;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @font-face {
   font-family: "Helvetica";
   src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff) format("woof");
@@ -124,6 +134,86 @@ body.light-mode {
   --btn-color: var(--color-btn-light);
   --btn-txt-color: var(--color-btn-txt-light);
   --border-color: var(--color-border-light);
+}
+body .select-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+body .select-wrapper::after {
+  content: "\f077";
+  /* kode ikon chevron-up */
+  font-family: "fontawesome";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%) rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+body .select-wrapper .select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--bg-color);
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  color: var(--headline-color);
+  border-radius: 5px;
+}
+body .select-wrapper .select:focus {
+  outline: none;
+  border-color: #2985FF;
+}
+body .select-wrapper .select:hover {
+  cursor: pointer;
+  background-color: var(--bg-color);
+}
+body .select-wrapper .select option {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--headline-color);
+}
+body .select-wrapper .select option:checked {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+body input[type=text],
+body input[type=number],
+body textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+body input[type=text]:focus,
+body input[type=number]:focus,
+body textarea:focus,
+body textarea:active,
+body input[type=number]:active,
+body input[type=text]:active {
+  outline: none;
+  background-color: var(--bg-color);
+  border-color: #2b94b8;
+}
+body input[disabled] {
+  background-color: var(--bg-muted-color);
+  background-color: #f2f2f2;
+  color: #555;
+  cursor: not-allowed;
+}
+body input::-moz-placeholder {
+  color: var(--text-muted-color);
+}
+body input::placeholder {
+  color: var(--text-muted-color);
 }
 
 nav {
@@ -646,32 +736,6 @@ table tbody tr td {
   font-weight: bold;
   font-size: 16px;
 }
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  color: #555;
-  background-color: #f2f2f2;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease-in-out;
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:focus, .sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[type=text]:active {
-  outline: none;
-  border-color: #2b94b8;
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input[disabled] {
-  background-color: var(--bg-muted-color);
-  cursor: not-allowed;
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::-moz-placeholder {
-  color: var(--text-muted-color);
-}
-.sidebar__main.krs .jumbotron .jumbotron-main .card .card-item input::placeholder {
-  color: var(--text-muted-color);
-}
 .sidebar__main.krs .jumbotron .jumbotron-main .card p {
   margin: 10px 0;
 }
@@ -750,6 +814,32 @@ table tbody tr td {
   transform: translate(-50%, -50%);
   color: var(--txt-color);
   font-weight: bold;
+}
+
+.presensi-online .card {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.presensi-online .card .card-item {
+  width: 100%;
+  padding: 20px;
+  display: block;
+}
+.presensi-online .card .card-item h3 {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.presensi-online .card .card-item .select-wrapper {
+  width: 100%;
+}
+.presensi-online .card .card-item select {
+  left: 0;
+  width: 100%;
+  padding: 10px;
 }
 
 .transkrip-header {
@@ -877,5 +967,12 @@ table tbody tr td {
   .sidebar .sidebar__main.krs .jumbotron .jumbotron-main .card p {
     font-size: 14px;
     text-align: start;
+  }
+  .sidebar .sidebar__main.presensi-online .card {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sidebar .sidebar__main.presensi-online .card .card-item h3 {
+    text-align: left;
   }
 }/*# sourceMappingURL=style.css.map */

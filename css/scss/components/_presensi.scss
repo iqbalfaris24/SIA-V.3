@@ -48,3 +48,35 @@
       }
    }
 }
+
+.presensi-online {
+   .card {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+
+      .card-item {
+         width: 100%;
+         padding: 20px;
+         display: block;
+
+         h3 {
+            margin: 0 0 10px;
+            font-weight: bold;
+            font-size: 16px;
+         }
+
+         .select-wrapper {
+            width: 100%;
+         }
+
+         select {
+            left: 0;
+            width: 100%;
+            padding: 10px;
+         }
+      }
+   }
+}
