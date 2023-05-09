@@ -1,0 +1,25 @@
+.transkrip-header {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   margin: 20px;
+
+   .details-transkrip {
+      font-weight: bold;
+      width: 25%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   button {
+      width: 100px;
+      height: 50px;
+      margin-right: 20px;
+   }
+}
+
+.transkrip-table {
+   font-size: 12px;
+}

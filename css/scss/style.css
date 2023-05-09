@@ -715,6 +715,16 @@ table tbody tr td {
 .presensi-table {
   margin-top: 20px;
 }
+.presensi-table tbody tr td.progress-bars {
+  cursor: default;
+  -webkit-user-select: none;
+  /* Untuk browser berbasis WebKit seperti Chrome dan Safari */
+  -moz-user-select: none;
+  /* Untuk browser berbasis Mozilla Firefox */
+  /* Untuk browser berbasis Microsoft Edge */
+  user-select: none;
+  /* Untuk browser modern */
+}
 .presensi-table tbody tr td.progress-bars .progress-bar {
   width: 100%;
   height: 15px;
@@ -740,6 +750,30 @@ table tbody tr td {
   transform: translate(-50%, -50%);
   color: var(--txt-color);
   font-weight: bold;
+}
+
+.transkrip-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.transkrip-header .details-transkrip {
+  font-weight: bold;
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.transkrip-header button {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.transkrip-table {
+  font-size: 12px;
 }
 
 /* Layar besar (lebar minimum 1200px) */

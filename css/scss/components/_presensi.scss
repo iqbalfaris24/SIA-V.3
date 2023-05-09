@@ -5,6 +5,16 @@
       tr {
          td {
             &.progress-bars {
+               cursor: default;
+               -webkit-user-select: none;
+               /* Untuk browser berbasis WebKit seperti Chrome dan Safari */
+               -moz-user-select: none;
+               /* Untuk browser berbasis Mozilla Firefox */
+               -ms-user-select: none;
+               /* Untuk browser berbasis Microsoft Edge */
+               user-select: none;
+
+               /* Untuk browser modern */
                .progress-bar {
                   width: 100%;
                   height: 15px;
