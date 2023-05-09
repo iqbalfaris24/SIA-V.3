@@ -1,0 +1,33 @@
+.khs-table {
+   tbody {
+      .btn-expand {
+         height: 35px !important;
+         border-radius: 50%;
+
+         .bi.bi-dash-circle-fill {
+            color: rgb(218, 11, 11);
+         }
+
+         i {
+            color: rgb(6, 218, 6);
+            font-size: 20px;
+         }
+      }
+
+      .expanded-row {
+         &.hide {
+            display: none;
+         }
+
+         td {
+            &:hover {
+               background-color: var(--bg-side-color);
+            }
+         }
+
+         .expanded-table {
+            &:hover {}
+         }
+      }
+   }
+}

@@ -76,7 +76,10 @@ body .border-striped tr:nth-child(even):hover {
   background-color: var(--bg-color);
 }
 body .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+body .text-start {
+  text-align: left !important;
 }
 body h1,
 body h2,
@@ -211,6 +214,7 @@ nav .dropdown {
   display: inline-flex;
   height: 100%;
   align-items: center;
+  background-color: transparent;
 }
 nav .dropdown:hover .user {
   filter: brightness(0.8);
@@ -686,10 +690,27 @@ table tbody tr td {
   text-align: left;
   border: 1px solid var(--bg-color);
 }
-.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(1), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(2), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(5), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(6), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(7), .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(8) {
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(1) {
   text-align: center;
 }
 
+.khs-table tbody .btn-expand {
+  height: 35px !important;
+  border-radius: 50%;
+}
+.khs-table tbody .btn-expand .bi.bi-dash-circle-fill {
+  color: rgb(218, 11, 11);
+}
+.khs-table tbody .btn-expand i {
+  color: rgb(6, 218, 6);
+  font-size: 20px;
+}
+.khs-table tbody .expanded-row.hide {
+  display: none;
+}
+.khs-table tbody .expanded-row td:hover {
+  background-color: var(--bg-side-color);
+}
 /* Layar besar (lebar minimum 1200px) */
 @media screen and (min-width: 1200px) {
   /* style untuk layar besar di sini */

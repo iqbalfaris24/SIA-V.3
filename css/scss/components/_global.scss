@@ -73,7 +73,11 @@ body {
    }
 
    .text-center {
-      text-align: center;
+      text-align: center !important;
+   }
+
+   .text-start {
+      text-align: left !important;
    }
 
    h1,
@@ -239,6 +243,7 @@ nav {
       display: inline-flex;
       height: 100%;
       align-items: center;
+      background-color: transparent;
 
       &:hover {
          .user {

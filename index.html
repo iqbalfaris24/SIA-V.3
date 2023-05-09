@@ -169,7 +169,7 @@
           <div class="card-body">
             <table id="myTable">
               <thead>
-                <tr>
+                <tr class="row">
                   <th>No</th>
                   <th>Waktu</th>
                   <th>Mata Kuliah</th>
@@ -178,25 +178,25 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="row">
                   <td>10:45:00 13:15:00</td>
                   <td>INFO-3640 Database Lanjut</td>
                   <td>Dr.Rakhmi khalida, ST, MMSI</td>
                   <td>R.K911</td>
                 </tr>
-                <tr>
+                <tr class="row">
                   <td>10:45:00 13:15:00</td>
                   <td>INFO-3635 - Desain dan Implementasi</td>
                   <td>Hendarman Lubis, S.Kom., M.Kom</td>
                   <td>SS-409</td>
                 </tr>
-                <tr>
+                <tr class="row">
                   <td>10:45:00 13:15:00</td>
                   <td>INFO-3641 - Pemrograman Berbasis Framework</td>
                   <td>Achmad Noe'man, S.Kom., M.Kom.</td>
                   <td>R.K915</td>
                 </tr>
-                <tr>
+                <tr class="row">
                   <td>13:30:00 16:00:00</td>
                   <td>INFO-3633 - Riset Teknologi Informasi</td>
                   <td>Ratna Salkiawati, S.T., M.Kom</td>
@@ -207,7 +207,7 @@
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content" data-aos="fade-up">
         <a href="https://elearning.ubharajaya.ac.id/my/" class="card card-feature">
           <div class="card-item">
             <div class="card-icon">
@@ -288,7 +288,7 @@
     // Table Auta Numbering
     function TableNumber() {
       var table = document.getElementById("myTable");
-      var rows = table.getElementsByTagName("tr");
+      var rows = table.getElementsByClassName("row");
       for (var i = 1; i < rows.length; i++) {
         rows[i].insertCell(0);
         rows[i].cells[0].innerHTML = i;
