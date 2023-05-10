@@ -662,6 +662,65 @@ table tbody tr td {
   width: 40px;
 }
 
+.sidebar__main.profile .table-biodata {
+  border: none;
+  border-radius: 0;
+  min-width: 0;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+.sidebar__main.profile .table-biodata tr td {
+  gap: 0;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+.sidebar__main.profile .jumbotron .card {
+  display: flex;
+  gap: 10px;
+}
+.sidebar__main.profile .jumbotron .card .details-mahasiswa {
+  display: flex;
+  width: 100%;
+}
+.sidebar__main.profile .jumbotron .card .profile-pic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sidebar__main.profile .jumbotron .card .profile-pic img {
+  padding: 10px;
+  width: 300px;
+  max-height: auto;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+.sidebar__main.profile .jumbotron .biodata-details {
+  display: flex;
+  gap: 10px;
+}
+.sidebar__main.profile .jumbotron .biodata-details h3 {
+  color: var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  padding: 10px 0px;
+  margin: 20px 0px;
+  text-align: center;
+}
+.sidebar__main.profile .jumbotron .biodata-details hr {
+  border: 2px solid var(--border-color);
+}
+.sidebar__main.profile .jumbotron .biodata-details .biodata {
+  width: 100%;
+}
+.sidebar__main.profile .jumbotron .biodata-details .biodata-orangtua {
+  width: 100%;
+}
+
 .sidebar__main.krs .jumbotron .jumbotron-header {
   display: flex;
   align-items: center;
@@ -1038,5 +1097,17 @@ table tbody tr td {
   }
   .sidebar .sidebar__main.presensi-online .card .card-item .card-details .card-body button h3 {
     text-align: center;
+  }
+  .sidebar .sidebar__main.profile hr {
+    display: none;
+  }
+  .sidebar .sidebar__main.profile .card {
+    flex-direction: column-reverse;
+  }
+  .sidebar .sidebar__main.profile .card .profile-pic {
+    margin: 50px 0px;
+  }
+  .sidebar .sidebar__main.profile .biodata-details {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

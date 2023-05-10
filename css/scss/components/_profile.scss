@@ -1,0 +1,74 @@
+.sidebar__main.profile {
+   .table-biodata {
+      border: none;
+      border-radius: 0;
+      min-width: 0;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+
+      tr {
+         td {
+            gap: 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+         }
+      }
+   }
+
+   .jumbotron {
+      .card {
+         display: flex;
+         gap: 10px;
+
+         .details-mahasiswa {
+            display: flex;
+            width: 100%;
+         }
+
+         .profile-pic {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+
+            img {
+               padding: 10px;
+               width: 300px;
+               max-height: auto;
+               height: auto;
+               border: 1px solid var(--border-color);
+               border-radius: 5px;
+            }
+         }
+      }
+
+      .biodata-details {
+         display: flex;
+         gap: 10px;
+
+         h3 {
+            color: var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+            padding: 10px 0px;
+            margin: 20px 0px;
+            text-align: center;
+         }
+
+         hr {
+            border: 2px solid var(--border-color);
+         }
+
+         .biodata {
+            width: 100%;
+         }
+
+         .biodata-orangtua {
+            width: 100%;
+         }
+      }
+   }
+}
