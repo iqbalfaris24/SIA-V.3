@@ -58,14 +58,14 @@
       align-items: flex-start;
       grid-gap: 10px;
 
+      .full-width {
+         grid-column: 1 / span 2;
+      }
+
       .card-item {
          width: 100%;
          padding: 20px;
          display: block;
-
-         &.full-width {
-            grid-column: 1 / span 2;
-         }
 
          .card-details {
             min-height: 250px;
@@ -89,10 +89,23 @@
                   align-self: flex-start;
                }
 
+               #clock {
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  padding: 10px;
+                  font-size: 16px;
+                  background-color: var(--bg-muted-color);
+                  background-color: #f2f2f2;
+                  color: #555;
+                  cursor: not-allowed;
+                  text-align: left;
+               }
+
+
                button {
-                  margin: auto;
-                  font-size: 18px;
-                  padding: 10px 15px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  width: 25%;
                }
             }
          }
