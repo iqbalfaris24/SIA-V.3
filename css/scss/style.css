@@ -73,6 +73,9 @@ body {
 body .d-none {
   display: none;
 }
+body .d-flex {
+  display: flex;
+}
 body .border-td-border td {
   border: 1px solid var(--bg-color);
 }
@@ -123,6 +126,9 @@ body button:hover {
 }
 body .btn-success {
   background-color: #29ff89;
+}
+body .btn-light {
+  background-color: var(--color-btn-light);
 }
 body.light-mode {
   --bg-color: var(--color-bg-light);
@@ -821,12 +827,42 @@ table tbody tr td {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
+  grid-gap: 10px;
 }
 .presensi-online .card .card-item {
   width: 100%;
   padding: 20px;
   display: block;
+}
+.presensi-online .card .card-item.full-width {
+  grid-column: 1/span 2;
+}
+.presensi-online .card .card-item .card-details {
+  min-height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+.presensi-online .card .card-item .card-details .card-body {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.presensi-online .card .card-item .card-details .card-body h3,
+.presensi-online .card .card-item .card-details .card-body input {
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+.presensi-online .card .card-item .card-details .card-body button {
+  margin: auto;
+  font-size: 18px;
+  padding: 10px 15px;
 }
 .presensi-online .card .card-item h3 {
   margin: 0 0 10px;
@@ -969,10 +1005,23 @@ table tbody tr td {
     text-align: start;
   }
   .sidebar .sidebar__main.presensi-online .card {
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .sidebar .sidebar__main.presensi-online .card .card-item {
+    grid-column: 1/1;
   }
   .sidebar .sidebar__main.presensi-online .card .card-item h3 {
     text-align: left;
+  }
+  .sidebar .sidebar__main.presensi-online .card .card-item .card-details {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sidebar .sidebar__main.presensi-online .card .card-item .card-details .card-body {
+    flex-direction: column;
+  }
+  .sidebar .sidebar__main.presensi-online .card .card-item .card-details .card-body button {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

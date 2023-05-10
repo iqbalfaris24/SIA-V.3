@@ -56,6 +56,10 @@ body {
       display: none;
    }
 
+   .d-flex {
+      display: flex;
+   }
+
    .border-td-border {
       td {
          border: 1px solid var(--bg-color);
@@ -126,6 +130,10 @@ body {
 
    .btn-success {
       background-color: #29ff89;
+   }
+
+   .btn-light {
+      background-color: var(--color-btn-light);
    }
 
    &.light-mode {

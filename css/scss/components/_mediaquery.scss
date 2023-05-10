@@ -164,12 +164,28 @@
 
       .sidebar__main.presensi-online {
          .card {
-            grid-template-rows: repeat(1, 1fr);
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
 
             .card-item {
+               grid-column: 1 / 1;
+
                h3 {
                   text-align: left;
+               }
+
+               .card-details {
+                  display: grid;
+                  grid-template-rows: repeat(1, 1fr);
+                  grid-template-columns: repeat(1, 1fr);
+
+                  .card-body {
+                     flex-direction: column;
+
+                     button {
+                        font-size: 16px;
+
+                     }
+                  }
                }
             }
          }

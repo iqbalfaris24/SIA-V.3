@@ -174,83 +174,103 @@
                <h3>kode Presensi :</h3>
                <input type="number" placeholder="" name="kode-presensi">
             </div>
-            <div class="card-item">
+            <div class="card-item full-width">
                <h3>Keterangan :</h3>
                <textarea id="ket" name="ket"></textarea>
             </div>
             <div class="card-item">
-               <h1>Presensi</h1>
-               <button onclick="getLocation()">Absen</button>
-               <div id="map" style="height: 400px; width: 100%;"></div>
-               <script
-                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEOSKaLuOCRmV8OU2tZ2KFDg5uR9rXcHA"></script>
-
-               <script>
-                  function initMap() {
-                     // Membuat peta
-                     const map = new google.maps.Map(document.getElementById("map"), {
-                        // Koordinat default
-                        zoom: 12, // Zoom default
-                     });
-
-                     // Mendapatkan lokasi pengunjung
-                     if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                           (position) => {
-                              const userLocation = {
-                                 lat: position.coords.latitude,
-                                 lng: position.coords.longitude,
-                              };
-
-                              // Menambahkan marker pada lokasi pengunjung
-                              new google.maps.Marker({
-                                 position: userLocation,
-                                 map: map,
-                                 title: "Lokasi Anda",
-                              });
-
-                              // Mengatur tampilan peta agar terfokus pada lokasi pengunjung
-                              map.setCenter(userLocation);
-                              map.setZoom(15);
-                           },
-                           () => {
-                              // Apabila geolocation gagal, tampilkan peta dengan koordinat default
-                              console.log("Gagal mendapatkan lokasi pengunjung.");
-                           }
-                        );
-                     } else {
-                        // Apabila browser tidak mendukung geolocation, tampilkan peta dengan koordinat default
-                        console.log("Browser tidak mendukung geolocation.");
-                     }
-                  }
-                  // Mendapatkan lokasi user
-                  if (navigator.geolocation) {
-                     navigator.geolocation.getCurrentPosition(showPosition);
-                  } else {
-                     alert("Geolocation tidak didukung oleh browser Anda");
-                  }
-
-                  function showPosition(position) {
-                     const lat = position.coords.latitude;
-                     const lng = position.coords.longitude;
-
-                     // Menampilkan peta dan titik GPS
-                     const map = new google.maps.Map(document.getElementById("map"), {
-                        center: { lat, lng },
-                        zoom: 16,
-                     });
-                     const marker = new google.maps.Marker({
-                        position: { lat, lng },
-                        map: map,
-                     });
-                  }
-
-               </script>
+               <h3>Lokasi :</h3>
+               <div id="map" style="height: 250px;"></div>
+            </div>
+            <div class="card-item">
+               <h3>Details :</h3>
+               <div class="card-details">
+                  <div class="card-body">
+                     <h3>Mata Kuliah :</h3>
+                     <input type="text" placeholder="Pemrograman Web" name="inputName" disabled>
+                  </div>
+                  <div class="card-body">
+                     <h3>Jam Kuliah :</h3>
+                     <input type="text" placeholder="13.30 - 16.00" name="inputName" disabled>
+                  </div>
+                  <div class="card-body">
+                     <h3>Minggu ke- :</h3>
+                     <input type="text" placeholder="9" name="inputName" disabled>
+                  </div>
+                  <div class="card-body d-flex">
+                     <button type="submit" class="btn btn-light">Submit</button>
+                  </div>
+               </div>
             </div>
          </div>
       </main>
    </div>
    <!-- End Of Sidebar Section -->
+
+   <!-- location -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEOSKaLuOCRmV8OU2tZ2KFDg5uR9rXcHA"></script>
+   <script>
+      function initMap() {
+         // Membuat peta
+         const map = new google.maps.Map(document.getElementById("map"), {
+            // Koordinat default
+            zoom: 12, // Zoom default
+         });
+
+         // Mendapatkan lokasi pengunjung
+         if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+               (position) => {
+                  const userLocation = {
+                     lat: position.coords.latitude,
+                     lng: position.coords.longitude,
+                  };
+
+                  // Menambahkan marker pada lokasi pengunjung
+                  new google.maps.Marker({
+                     position: userLocation,
+                     map: map,
+                     title: "Lokasi Anda",
+                  });
+
+                  // Mengatur tampilan peta agar terfokus pada lokasi pengunjung
+                  map.setCenter(userLocation);
+                  map.setZoom(15);
+               },
+               () => {
+                  // Apabila geolocation gagal, tampilkan peta dengan koordinat default
+                  console.log("Gagal mendapatkan lokasi pengunjung.");
+               }
+            );
+         } else {
+            // Apabila browser tidak mendukung geolocation, tampilkan peta dengan koordinat default
+            console.log("Browser tidak mendukung geolocation.");
+         }
+      }
+      // Mendapatkan lokasi user
+      if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+         alert("Geolocation tidak didukung oleh browser Anda");
+      }
+
+      function showPosition(position) {
+         const lat = position.coords.latitude;
+         const lng = position.coords.longitude;
+
+         // Menampilkan peta dan titik GPS
+         const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat, lng },
+            zoom: 16,
+         });
+         const marker = new google.maps.Marker({
+            position: { lat, lng },
+            map: map,
+         });
+      }
+
+   </script>
+
 
    <script>
       // Theme Toogle
