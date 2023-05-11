@@ -18,12 +18,21 @@
    }
 
    .jumbotron {
+      h3 {
+         color: var(--border-color);
+         border-bottom: 2px solid var(--border-color);
+         padding: 10px 0px;
+         margin: 20px 0px;
+         text-align: center;
+      }
+
       .card {
          display: flex;
          gap: 10px;
 
+
          .details-mahasiswa {
-            display: flex;
+            display: block;
             width: 100%;
          }
 
@@ -50,13 +59,7 @@
          display: flex;
          gap: 10px;
 
-         h3 {
-            color: var(--border-color);
-            border-bottom: 2px solid var(--border-color);
-            padding: 10px 0px;
-            margin: 20px 0px;
-            text-align: center;
-         }
+
 
          hr {
             border: 2px solid var(--border-color);
