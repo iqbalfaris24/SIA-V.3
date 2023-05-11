@@ -68,6 +68,12 @@
 
          .biodata-orangtua {
             width: 100%;
+
+            h4 {
+               color: var(--border-color);
+               text-align: center;
+               font-weight: bold;
+            }
          }
       }
    }

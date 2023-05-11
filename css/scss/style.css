@@ -720,6 +720,11 @@ table tbody tr td {
 .sidebar__main.profile .jumbotron .biodata-details .biodata-orangtua {
   width: 100%;
 }
+.sidebar__main.profile .jumbotron .biodata-details .biodata-orangtua h4 {
+  color: var(--border-color);
+  text-align: center;
+  font-weight: bold;
+}
 
 .sidebar__main.krs .jumbotron .jumbotron-header {
   display: flex;
