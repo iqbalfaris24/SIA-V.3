@@ -1078,6 +1078,9 @@ table tbody tr td {
     font-size: 14px;
     text-align: start;
   }
+  .sidebar .sidebar__main.krs .content {
+    margin-top: 0;
+  }
   .sidebar .sidebar__main.presensi-online .card {
     grid-template-columns: 1fr;
   }
