@@ -394,7 +394,6 @@ table {
   color: var(--text-color);
   overflow: auto;
   border-radius: 5px;
-  min-width: 1100px;
   border: 1px solid var(--border-color);
 }
 table thead tr th {
@@ -826,6 +825,9 @@ table tbody tr td {
 }
 .sidebar__main.krs .jumbotron .jumbotron-main .card .krs-table tbody tr td:nth-child(1) {
   text-align: center;
+}
+.sidebar__main.krs .jumbotron .jumbotron-main .card .krs-full {
+  min-width: 400px;
 }
 
 .khs-table tbody .btn-expand {
